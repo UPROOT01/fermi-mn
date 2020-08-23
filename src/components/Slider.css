@@ -1,0 +1,24 @@
+.slider-container {
+    position: relative;
+    width: 40%;
+}
+
+.slider-image {
+    width: 100%;
+}
+
+.slider-prev, .slider-next {
+    height: 3rem;
+    width: 2rem;
+    margin-top: -1.5rem;
+    position: absolute;
+    top: 50%;
+}
+
+.slider-prev {
+    left: 0;
+}
+
+.slider-next {
+    right: 0;
+}

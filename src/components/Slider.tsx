@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Slider.css";
 
-class Slider extends React.Component {
-	index = 0;
-	images = [
+interface Props {}
+
+const Slider: React.FC<Props> = () => {
+    const [index, setIndex] = useState(0);
+    const images = [
 		"https://www.fermimn.edu.it/img/showlogo.php?slidecode=26",
 		"https://www.fermimn.edu.it/img/showlogo.php?slidecode=27",
 		"https://www.fermimn.edu.it/img/showlogo.php?slidecode=28",
@@ -11,16 +13,18 @@ class Slider extends React.Component {
 		"https://www.fermimn.edu.it/img/showlogo.php?slidecode=30",
 	];
 
-	render() {
-		return (
-			<div>
-				<img
-					src={this.images[this.index]}
-					alt="Impossibile caricare l'immagine"
-				/>
-			</div>
-		);
-	}
-}
+    return (
+        <div className="slider-container">
+            <img
+                className="slider-image"
+                src={images[index]}
+                alt="Impossibile caricare l'immagine"
+            />
+
+            <button className="slider-prev" onClick={() => setIndex((index + images.length - 1) % images.length)}>&#10094;</button>
+            <button className="slider-next" onClick={() => setIndex((index + 1) % images.length)}>&#10095;</button>
+        </div>
+    );
+};
 
 export default Slider;

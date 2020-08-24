@@ -1,6 +1,7 @@
 import React from "react";
 import "./Landing.css";
 import logo from "./logo.png";
+import clickButton from "./clickButton.svg";
 
 interface Props {}
 
@@ -14,6 +15,8 @@ const LandingPage: React.FC<Props> = () => {
 					<h2>Istituto superiore “E. Fermi”</h2>
 				</div>
 			</div>
+
+			<img className="clickButton" src={clickButton} alt="error" />
 		</main>
 	);
 };

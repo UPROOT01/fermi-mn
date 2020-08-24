@@ -11,6 +11,8 @@ main.Landing {
 	background-image: url("./LandingBackground.svg");
 	background-repeat: no-repeat;
 	background-position: center;
+	overflow: hidden;
+	position: relative;
 
 	div.background {
 		height: 100%;
@@ -26,21 +28,86 @@ main.Landing {
 
 		img.logo {
 			width: 60%;
+			opacity: 0;
+			animation: fadeLeft 1s ease-in-out 0s 1 forwards;
 		}
 
 		div.titles {
 			font-family: Montserrat;
-			margin-bottom: 15rem;
+			margin-bottom: 15em;
+
+			* {
+				opacity: 0;
+			}
 
 			h1 {
-				font-size: 3rem;
+				font-size: 3em;
 				font-weight: 500;
+				animation: fadeRight 1s ease-in-out 0s 1 forwards;
 			}
 
 			h2 {
-				font-size: 1.5rem;
+				font-size: 1.5em;
 				font-weight: normal;
-				margin-top: 2rem;
+				margin-top: 2em;
+				animation: fadeRight 1s ease-in-out 100ms 1 forwards;
+			}
+		}
+	}
+
+	.clickButton {
+		position: absolute;
+
+		bottom: 3em;
+		right: 3em;
+
+		animation: opacity 1s ease-in-out 0s 1 forwards;
+
+		@keyframes opacity {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+	}
+
+	@keyframes fadeLeft {
+		from {
+			opacity: 0;
+			transform: translateX(-100%);
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeRight {
+		from {
+			opacity: 0;
+			transform: translateX(100%);
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@media (max-width: 800px) {
+		font-size: 14px;
+
+		div.background {
+			background: linear-gradient(180deg, #e6e6e6 33%, transparent 0%);
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);
+			gap: 3em;
+
+			div.titles {
+				margin-left: 2em;
+				margin-right: 2em;
 			}
 		}
 	}

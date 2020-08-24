@@ -4,7 +4,7 @@ import LandingPage from "./pages/Landing";
 import Slider from "./components/Slider";
 
 function App() {
-	return <Slider></Slider>;
+	return <LandingPage></LandingPage>;
 }
 
 export default App;

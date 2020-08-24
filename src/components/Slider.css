@@ -21,10 +21,6 @@
     transition: background-color 0.4s ease-in-out;
 }
 
-.slider-prev:hover, .slider-next:hover {
-    background-color: #bbb;
-}
-
 .slider-prev {
     left: 0;
     border-top-right-radius: 5px;
@@ -56,6 +52,12 @@
 
 .slider-dot-active {
     background-color: #717171;
+}
+
+@media (hover: hover) {
+    .slider-prev:hover, .slider-next:hover {
+        background-color: #bbb;
+    }
 }
 
 @media screen and (max-width: 1280px) {

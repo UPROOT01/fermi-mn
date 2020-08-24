@@ -8,17 +8,50 @@
 }
 
 .slider-prev, .slider-next {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-weight: bold;
     height: 3rem;
     width: 2rem;
-    margin-top: -1.5rem;
+    margin-top: -2rem;
     position: absolute;
     top: 50%;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.slider-prev:hover, .slider-next:hover {
+    background-color: #bbb;
 }
 
 .slider-prev {
     left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .slider-next {
     right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.slider-dot-container {
+    text-align: center;
+}
+
+.slider-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slider-dot-active {
+    background-color: #717171;
 }

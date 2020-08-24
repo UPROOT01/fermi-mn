@@ -9,6 +9,7 @@ article.Article {
 	div.text {
 		background-color: white;
 		font-family: "Poppins", sans-serif;
+		z-index: 1;
 
 		grid-column: 1 / 4;
 		grid-row: 1 / 2;
@@ -34,10 +35,28 @@ article.Article {
 		grid-column: 3 / 5;
 		grid-row: 1 / 2;
 
-		z-index: -1;
+		z-index: 0;
 
 		justify-self: end;
 
 		height: 100%;
+	}
+
+	@media (max-width: 700px) {
+		display: flex;
+		flex-direction: column;
+
+		div.text {
+			margin: 0;
+
+			h2 {
+				display: none;
+				width: 100%;
+			}
+		}
+
+		img {
+			object-fit: cover;
+		}
 	}
 }

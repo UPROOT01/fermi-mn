@@ -3,9 +3,10 @@ import "./App.css";
 import LandingPage from "./pages/Landing";
 import Slider from "./components/Slider";
 import Article from "./components/Article";
+import HomePage from "./pages/Home";
 
 function App() {
-	return <Slider></Slider>;
+	return <HomePage></HomePage>;
 }
 
 export default App;

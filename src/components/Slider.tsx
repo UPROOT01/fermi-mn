@@ -23,6 +23,13 @@ const Slider: React.FC<Props> = () => {
 				infiniteLoop={true}
 				autoPlay={true}
 				emulateTouch={true}
+				renderIndicator={(onClick, isSelected) => (
+					<div
+						className="slider-dot"
+						style={isSelected ? { backgroundColor: "white" } : {}}
+						onClick={onClick}
+					></div>
+				)}
 			>
 				{images.map((value, index) => {
 					return (

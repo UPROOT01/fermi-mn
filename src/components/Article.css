@@ -11,6 +11,7 @@ article.Article {
 article.Article div.text {
   background-color: white;
   font-family: "Poppins", sans-serif;
+  z-index: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
@@ -40,8 +41,31 @@ article.Article img {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  z-index: -1;
+  z-index: 0;
   -ms-grid-column-align: end;
       justify-self: end;
   height: 100%;
+}
+
+@media (max-width: 700px) {
+  article.Article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  article.Article div.text {
+    margin: 0;
+  }
+  article.Article div.text h2 {
+    display: none;
+    width: 100%;
+  }
+  article.Article img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }

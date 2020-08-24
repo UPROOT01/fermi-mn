@@ -1,0 +1,41 @@
+main.HomePage {
+  background-color: #f0f0f0;
+  background-image: url("home-backround.svg");
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.HomePage div.mainList {
+  width: 50%;
+}
+
+main.HomePage div.mainList .wrapper {
+  margin-bottom: 2em;
+}
+
+@media (max-width: 850px) {
+  main.HomePage div.mainList {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1800px) {
+  main.HomePage div.mainList {
+    width: 40%;
+  }
+}
+
+@media (min-width: 3000px) {
+  main.HomePage div.mainList {
+    width: 20%;
+  }
+}

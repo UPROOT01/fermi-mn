@@ -1,0 +1,39 @@
+main.HomePage {
+	background-color: #f0f0f0;
+	background-image: url("home-backround.svg");
+	min-height: 100vh;
+	width: 100%;
+
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-attachment: fixed;
+
+	display: flex;
+	justify-content: center;
+
+	div.mainList {
+		width: 50%;
+
+		.wrapper {
+			margin-bottom: 2em;
+		}
+	}
+
+	@media (max-width: 850px) {
+		div.mainList {
+			width: 80%;
+		}
+	}
+
+	@media (min-width: 1800px) {
+		div.mainList {
+			width: 40%;
+		}
+	}
+
+	@media (min-width: 3000px) {
+		div.mainList {
+			width: 20%;
+		}
+	}
+}

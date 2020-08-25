@@ -48,8 +48,8 @@ const UsefulLinksPage: React.FC<UsefulLinksProps> = () => {
 			<HeaderBar></HeaderBar>
 			<main className="UsefulLinksPage">
 				<div className="main-container">
-					{utilityLinks.map((link) => (
-						<SingleElement {...link}></SingleElement>
+					{utilityLinks.map((link, index) => (
+						<SingleElement key={index} {...link}></SingleElement>
 					))}
 				</div>
 			</main>

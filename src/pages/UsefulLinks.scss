@@ -16,17 +16,19 @@
 		background-color: white;
 		border-radius: 1em;
 		border-color: transparent;
-		padding: 1em;
 		box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 
 		justify-items: center;
 		align-items: center;
 
 		img {
-			height: calc(100% - 2em);
-			max-width: 100%;
+			height: calc(100% - 4em);
+			max-width: calc(100% - 2em);
 
 			object-fit: scale-down;
+			margin-top: 1em;
+			margin-left: 1em;
+			margin-right: 1em;
 		}
 
 		div.title {

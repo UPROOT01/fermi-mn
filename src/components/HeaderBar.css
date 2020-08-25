@@ -5,6 +5,7 @@
 	position: sticky;
 	top: 0;
 	width: 100%;
+	max-height: 100vh;
 
 	z-index: 999;
 }
@@ -28,7 +29,7 @@
 	display: none;
 }
 
-.header-mobile-menu {
+.header-mobile-menu > span, .header-mobile-menu > br {
 	display: none;
 }
 
@@ -43,12 +44,36 @@
 		display: inline;
 	}
 
-	.header-main span:not(.header-hamburger) {
+	.header-container span:not(.header-hamburger) {
 		display: none;
 	}
 
 	.header-mobile-menu {
-		display: block;
+		padding-top: 25px;
+		animation-name: header-menu-spawn;
+		animation-duration: 300ms;
+		transform-origin: top;
+		overflow-y: scroll;
+		max-height: calc(100vh - 5.5em);
+	}
+
+	.header-mobile-hidden {
+		display: none;
+	}
+
+	.header-mobile-menu > span, .header-mobile-menu > br {
+		display: inline-block;
+		transition: transform 300ms ease-in-out;
+	}
+
+	span.header-rotated {
+		display: inline-block;
+		width: min-content;
+		transform: rotate(180deg);
+	}
+
+	#header-nostri-siti {
+		padding-top: 0;
 	}
 }
 
@@ -85,7 +110,7 @@
 .header-menu {
 	margin-top: 4px;
 	box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);
-	padding: 20px;
+	padding: 25px;
 	animation-name: header-menu-spawn;
 	animation-duration: 300ms;
 	transform-origin: top;

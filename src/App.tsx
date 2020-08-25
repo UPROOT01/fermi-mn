@@ -4,15 +4,11 @@ import LandingPage from "./pages/Landing";
 import Slider from "./components/Slider";
 import Article from "./components/Article";
 import HeaderBar from "./components/HeaderBar";
+import HomePage from "./pages/Home";
+import AboutUsPage from "./pages/AboutUs";
 
 function App() {
-	return (
-		<div>
-			<HeaderBar></HeaderBar>
-			<div className="test"></div>
-			<p>fine</p>
-		</div>
-	);
+	return <AboutUsPage></AboutUsPage>;
 }
 
 export default App;

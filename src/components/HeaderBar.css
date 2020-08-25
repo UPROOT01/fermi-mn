@@ -10,6 +10,10 @@
 	z-index: 999;
 }
 
+.header-mobile-menu span svg {
+	height: 1em;
+}
+
 .header-logo-container {
 	margin-right: auto;
 	display: flex;

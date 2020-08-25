@@ -1,6 +1,6 @@
 main.HomePage {
   background-color: #f0f0f0;
-  background-image: url("home-backround.svg");
+  background-image: url("../assets/home-backround.svg");
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;

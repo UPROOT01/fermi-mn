@@ -1,7 +1,7 @@
 import React from "react";
 import "./Landing.css";
-import logo from "./logo.png";
-import clickButton from "./clickButton.svg";
+import logo from "../assets/logo.png";
+import clickButton from "../assets/clickButton.svg";
 
 interface Props {}
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logoOutline from "./logo_outline.svg";
-import logoText from "./logo_text.svg";
+import logoOutline from "../assets/logo_outline.svg";
+import logoText from "../assets/logo_text.svg";
 import "./HeaderBar.css";
 
 interface Props {}
@@ -68,7 +68,15 @@ const HeaderBar: React.FC<Props> = () => {
 				</span>
 				<span className="header-spaced">Link utili</span>
 				<span className="header-hamburger" onClick={() => setMobileMenu(!mobileMenu)}>
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+					</svg>
 				</span>
 			</div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderBar from "../components/HeaderBar";
-import banner from "./banner.jpg";
+import banner from "../assets/banner.jpg";
 import "./AboutUs.css";
 
 interface Props {}

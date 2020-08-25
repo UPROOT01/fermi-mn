@@ -14,7 +14,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    z-index: 999;
 }
 
 .header-main span {
@@ -43,8 +42,8 @@
     box-shadow: 0 4px 4px -4px rgba(0, 0, 0, .15);
     padding: 20px;
     animation-name: header-menu-spawn;
-    animation-duration: 2000ms;
-    z-index: 998;
+    animation-duration: 300ms;
+    transform-origin: top;
 }
 
 .test {
@@ -53,9 +52,9 @@
 
 @keyframes header-menu-spawn {
     from {
-        height: 0;
+        transform: scaleY(0);
     }
     to {
-        height: auto;
+        transform: scaleY(1);
     }
 }

@@ -11,12 +11,16 @@ const HeaderBar: React.FC<Props> = () => {
         <div className="header-main">
             <div className="header-container">
                 <span>Home</span>
-                <span onClick={() => setActiveMenus([!activeMenus[0], false, false, false])}>Area riservata ⯆</span>
-                <span onClick={() => setActiveMenus([false, !activeMenus[1], false, false])}>Istituto ⯆</span>
-                <span>Reti di ambito</span>
-                <span onClick={() => setActiveMenus([false, false, !activeMenus[2], false])}>A.S. 2019/2020 ⯆</span>
-                <span onClick={() => setActiveMenus([false, false, false, !activeMenus[3]])}>I nostri siti ⯆</span>
-                <span>Link utili</span>
+                <span className="header-spaced" onClick={() => setActiveMenus([!activeMenus[0], false, false, false])}>Area riservata</span>
+                <span className={activeMenus[0] ? "header-rotated" : ""}>⯆</span>
+                <span className="header-spaced" onClick={() => setActiveMenus([false, !activeMenus[1], false, false])}>Istituto</span>
+                <span className={activeMenus[1] ? "header-rotated" : ""}>⯆</span>
+                <span className="header-spaced">Reti di ambito</span>
+                <span className="header-spaced" onClick={() => setActiveMenus([false, false, !activeMenus[2], false])}>A.S. 2019/2020</span>
+                <span className={activeMenus[2] ? "header-rotated" : ""}>⯆</span>
+                <span className="header-spaced" onClick={() => setActiveMenus([false, false, false, !activeMenus[3]])}>I nostri siti</span>
+                <span className={activeMenus[3] ? "header-rotated" : ""}>⯆</span>
+                <span className="header-spaced">Link utili</span>
             </div>
 
             <div id="header-area-riservata" className={activeMenus[0] ? "header-menu" : "header-hidden"}>

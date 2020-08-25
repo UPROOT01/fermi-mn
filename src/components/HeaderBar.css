@@ -1,73 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .header-main {
-    background-color: white;
-    position: sticky;
-    top: 0;
-    width: 100%;
+	background-color: white;
+	position: sticky;
+	top: 0;
+	width: 100%;
+
+	z-index: 999;
+}
+
+.header-logo-container {
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.header-logo-text {
+	margin-left: 0.5em;
+	transition: max-width 300ms ease-in-out;
+}
+
+.header-logo-img {
+	margin-left: 1em;
+}
+
+@media (max-width: 1050px) {
+	.header-logo-text {
+		max-width: 0;
+	}
 }
 
 .header-container {
-    background-color: white;
-    height: 4em;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .15);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+	background-color: white;
+	height: 4em;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 .header-main span {
-    line-height: 1em;
-    user-select: none;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    transition: font-weight;
-    transition: transform 300ms ease-in-out;
+	line-height: 1em;
+	user-select: none;
+	cursor: pointer;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	transition: font-weight;
+	transition: transform 300ms ease-in-out;
 }
 
 .header-main span:hover {
-    user-select: none;
-    cursor: pointer;
-    font-weight: 700;
+	user-select: none;
+	cursor: pointer;
+	font-weight: 700;
 }
 
 .header-hidden {
-    display: none;
+	display: none;
 }
 
 .header-menu {
-    margin-top: 4px;
-    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, .15);
-    padding: 20px;
-    animation-name: header-menu-spawn;
-    animation-duration: 300ms;
-    transform-origin: top;
+	margin-top: 4px;
+	box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);
+	padding: 20px;
+	animation-name: header-menu-spawn;
+	animation-duration: 300ms;
+	transform-origin: top;
 }
 
 .test {
-    height: 2000px;
+	height: 2000px;
 }
 
 @keyframes header-menu-spawn {
-    from {
-        transform: scaleY(0);
-    }
-    to {
-        transform: scaleY(1);
-    }
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
+	}
 }
 
 .header-rotated {
-    display: block;
-    width: min-content;
-    transform: rotate(180deg);
+	display: block;
+	width: min-content;
+	transform: rotate(180deg);
 }
 
 .header-spaced {
-    margin-left: 25px;
+	margin-left: 25px;
 }
 
 .header-spaced:last-child {
-    margin-right: 25px;
+	margin-right: 25px;
 }

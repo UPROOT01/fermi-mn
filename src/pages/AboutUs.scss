@@ -1,5 +1,36 @@
 main.AboutUsPage {
+	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 	img.banner {
-		width: 100%;
+		width: 70%;
+		align-self: center;
+		margin: 3em;
+	}
+
+	.pageContainer {
+		font-family: "Poppins", sans-serif;
+
+		width: 80%;
+		margin: auto;
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	section {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+
+		h1 {
+			font-size: 2em;
+			margin-block-start: 0em;
+			margin-block-end: 0em;
+		}
+	}
+
+	@media (max-width: 700px) {
+		img.banner {
+			width: 100%;
+		}
 	}
 }

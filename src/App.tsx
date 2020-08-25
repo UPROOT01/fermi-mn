@@ -8,7 +8,7 @@ import HomePage from "./pages/Home";
 import AboutUsPage from "./pages/AboutUs";
 
 function App() {
-	return <AboutUsPage></AboutUsPage>;
+	return <HomePage></HomePage>;
 }
 
 export default App;

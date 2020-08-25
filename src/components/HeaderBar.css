@@ -2,17 +2,19 @@
 
 .header-main {
     background-color: white;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
 }
 
 .header-container {
+    background-color: white;
     height: 4em;
     box-shadow: 0 0 4px rgba(0, 0, 0, .15);
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    z-index: 999;
 }
 
 .header-main span {
@@ -40,8 +42,20 @@
     margin-top: 4px;
     box-shadow: 0 4px 4px -4px rgba(0, 0, 0, .15);
     padding: 20px;
+    animation-name: header-menu-spawn;
+    animation-duration: 2000ms;
+    z-index: 998;
 }
 
 .test {
     height: 2000px;
+}
+
+@keyframes header-menu-spawn {
+    from {
+        height: 0;
+    }
+    to {
+        height: auto;
+    }
 }

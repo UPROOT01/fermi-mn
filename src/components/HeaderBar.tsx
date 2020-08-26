@@ -12,16 +12,66 @@ const links: {
 }[] = [
 	{ title: "Home" },
 	{
-		title: "Settings",
+		title: "Area riservata",
 		child: {
 			children: [
-				{ title: "heyla", link: "" },
-				{ title: "heyla", link: "" },
-				{ title: "heyla", link: "" },
-				{ title: "heyla", link: "" },
+				{ title: "Studenti", link: "" },
+				{ title: "Genitori", link: "" },
+				{ title: "Docenti", link: "" },
+				{ title: "Personale A.T.A.", link: "" },
 			],
 		},
 	},
+	{
+		title: "Istituto",
+		child: {
+			children: [
+				{ title: "Chi Siamo", link: "" },
+				{ title: "Le Persone", link: "" },
+				{ title: "I nostri corsi", link: "" },
+				{ title: "Strutture e Servizi", link: "" },
+				{ title: "Documenti", link: "" },
+				{ title: "Parlano di noi", link: "" },
+				{ title: "Bandi e Gare", link: "" },
+			],
+		},
+	},
+	{ title: "Reti di Ambito" },
+	{
+		title: "A.S. 2019/2020",
+		child: {
+			children: [
+				{ title: "Privacy GDPR 679/16", link: "" },
+				{ title: "Calendario Orari", link: "" },
+				{ title: "Progetti", link: "" },
+				{ title: "Cittadinanza e Costituzione", link: "" },
+				{ title: "Formazione", link: "" },
+				{ title: "Programmazione Comune", link: "" },
+				{ title: "Alternanza Scuola Lavoro", link: "" },
+				{ title: "Materiali Invalsi", link: "" },
+				{ title: "Info per III medie", link: "" },
+				{ title: "Orientamento in uscita", link: "" },
+				{ title: "FabAcademy", link: "" },
+				{ title: "Innovazioni Green", link: "" },
+				{ title: "Viaggi ed uscite didattiche", link: "" },
+			],
+		},
+	},
+	{
+		title: "Nostri siti",
+		child: {
+			children: [
+				{ title: "Open Source e Freeware", link: "" },
+				{ title: "I siti del Fermi", link: "" },
+				{ title: "Fotovoltaico", link: "" },
+				{ title: "Dati Energetici", link: "" },
+				{ title: "Archivio di Stato", link: "" },
+				{ title: "Scuola21", link: "" },
+				{ title: "Progetto LER", link: "" },
+			],
+		},
+	},
+	{ title: "Link utili" },
 ];
 
 const isLastOpen = (array: { [index: number]: boolean }) => {
@@ -124,38 +174,40 @@ const HeaderBar: React.FC<Props> = () => {
 					if (link.child === undefined) {
 						return (
 							<React.Fragment key={index + "mobiledddddd"}>
-								<span key={index + "mobile"} className="header-spaced">
-									Home
-								</span>
-								<br key={index + "mobileb1"} />
-								<br key={index + "mobileb2"} />
+								<p>
+									<span key={index + "mobile"} className="header-spaced">
+										{link.title}
+									</span>
+								</p>
 							</React.Fragment>
 						);
 					} else {
 						return (
 							<React.Fragment key={index + "mobiledddd"}>
-								<span
-									key={index + "mobile"}
-									className="header-spaced"
-									onClick={() => openMenu(index)}
-								>
-									Area riservata
-								</span>
-								<span
-									onClick={() => openMenu(index)}
-									className={linksState[index] ? "header-rotated" : ""}
-									key={index + "mobile icon"}
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										height="24"
-										viewBox="0 0 24 24"
-										width="24"
+								<p>
+									<span
+										key={index + "mobile"}
+										className="header-spaced"
+										onClick={() => openMenu(index)}
 									>
-										<path d="M0 0h24v24H0z" fill="none" />
-										<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-									</svg>
-								</span>
+										{link.title}
+									</span>
+									<span
+										onClick={() => openMenu(index)}
+										className={linksState[index] ? "header-rotated" : ""}
+										key={index + "mobile icon"}
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											height="24"
+											viewBox="0 0 24 24"
+											width="24"
+										>
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+										</svg>
+									</span>
+								</p>
 								<div
 									className={
 										linksState[index] ? "header-menu" : "header-hidden"

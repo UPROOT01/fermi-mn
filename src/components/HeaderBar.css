@@ -45,57 +45,9 @@
 }
 
 .header-mobile-menu > span,
-.header-mobile-menu > br {
+.header-mobile-menu > br,
+.header-mobile-menu > p {
 	display: none;
-}
-
-@media (max-width: 1050px) {
-	.header-logo-text {
-		max-width: 0;
-	}
-}
-
-@media screen and (max-width: 920px) {
-	.header-hamburger {
-		display: inline;
-	}
-
-	.header-container span:not(.header-hamburger) {
-		display: none;
-	}
-
-	.header-mobile-menu {
-		padding-top: 25px;
-		animation-name: header-menu-spawn;
-		animation-duration: 300ms;
-		transform-origin: top;
-		overflow-y: scroll;
-		max-height: calc(100vh - 5.5em);
-	}
-
-	.header-mobile-hidden {
-		display: none;
-	}
-
-	.header-mobile-menu > span,
-	.header-mobile-menu > br {
-		display: inline-block;
-		transition: transform 300ms ease-in-out;
-	}
-
-	span.header-rotated {
-		display: inline-block;
-		width: min-content;
-		transform: rotate(180deg);
-	}
-
-	#header-nostri-siti {
-		padding-top: 0;
-	}
-
-	.header-mobile-lastopen {
-		padding-bottom: 25px;
-	}
 }
 
 .header-container {
@@ -159,4 +111,62 @@
 
 .header-spaced {
 	margin-left: 25px;
+}
+
+@media (max-width: 1050px) {
+	.header-logo-text {
+		max-width: 0;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.header-hamburger {
+		display: inline;
+	}
+
+	.header-container span:not(.header-hamburger) {
+		display: none;
+	}
+
+	.header-mobile-menu {
+		padding-top: 25px;
+		animation-name: header-menu-spawn;
+		animation-duration: 300ms;
+		transform-origin: top;
+		overflow-y: scroll;
+		max-height: calc(100vh - 5.5em);
+	}
+
+	.header-mobile-hidden {
+		display: none;
+	}
+
+	.header-mobile-menu > span,
+	.header-mobile-menu > br {
+		display: inline-block;
+		transition: transform 300ms ease-in-out;
+	}
+
+	.header-mobile-menu > p {
+		display: block;
+	}
+
+	span.header-rotated {
+		display: inline-block;
+		width: min-content;
+		transform: rotate(180deg);
+	}
+
+	#header-nostri-siti {
+		padding-top: 0;
+	}
+
+	.header-mobile-lastopen {
+		padding-bottom: 25px;
+	}
+
+	.header-menu {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
 }

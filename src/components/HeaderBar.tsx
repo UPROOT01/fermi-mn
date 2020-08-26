@@ -5,8 +5,14 @@ import "./HeaderBar.css";
 
 interface Props {}
 
+const links: {
+	title: string;
+	link?: string;
+	child?: { open: boolean; children: { title: string; link: string }[] };
+}[] = [];
+
 const HeaderBar: React.FC<Props> = () => {
-	const [activeMenus, setActiveMenus] = useState([false, false, false, false]);
+	const [activeMenus, setActiveMenus] = useState(links);
 	const [mobileMenu, setMobileMenu] = useState(false);
 
 	return (
@@ -27,7 +33,15 @@ const HeaderBar: React.FC<Props> = () => {
 					onClick={() => setActiveMenus([!activeMenus[0], false, false, false])}
 					className={activeMenus[0] ? "header-rotated" : ""}
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+					</svg>
 				</span>
 				<span
 					className="header-spaced"
@@ -39,7 +53,15 @@ const HeaderBar: React.FC<Props> = () => {
 					onClick={() => setActiveMenus([false, !activeMenus[1], false, false])}
 					className={activeMenus[1] ? "header-rotated" : ""}
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+					</svg>
 				</span>
 				<span className="header-spaced">Reti di ambito</span>
 				<span
@@ -52,7 +74,15 @@ const HeaderBar: React.FC<Props> = () => {
 					onClick={() => setActiveMenus([false, false, !activeMenus[2], false])}
 					className={activeMenus[2] ? "header-rotated" : ""}
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+					</svg>
 				</span>
 				<span
 					className="header-spaced"
@@ -64,10 +94,21 @@ const HeaderBar: React.FC<Props> = () => {
 					onClick={() => setActiveMenus([false, false, false, !activeMenus[3]])}
 					className={activeMenus[3] ? "header-rotated" : ""}
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+					</svg>
 				</span>
 				<span className="header-spaced">Link utili</span>
-				<span className="header-hamburger" onClick={() => setMobileMenu(!mobileMenu)}>
+				<span
+					className="header-hamburger"
+					onClick={() => setMobileMenu(!mobileMenu)}
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						height="24"
@@ -80,8 +121,14 @@ const HeaderBar: React.FC<Props> = () => {
 				</span>
 			</div>
 
-			<div className={"header-mobile-menu" + (mobileMenu ? "" : " header-mobile-hidden")}>
-				<span className="header-spaced">Home</span><br/><br/>
+			<div
+				className={
+					"header-mobile-menu" + (mobileMenu ? "" : " header-mobile-hidden")
+				}
+			>
+				<span className="header-spaced">Home</span>
+				<br />
+				<br />
 				<span
 					className="header-spaced"
 					onClick={() => setActiveMenus([!activeMenus[0], false, false, false])}
@@ -92,8 +139,17 @@ const HeaderBar: React.FC<Props> = () => {
 					onClick={() => setActiveMenus([!activeMenus[0], false, false, false])}
 					className={activeMenus[0] ? "header-rotated" : ""}
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
-				</span><br/>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+					</svg>
+				</span>
+				<br />
 				<div
 					id="header-area-riservata"
 					className={activeMenus[0] ? "header-menu" : "header-hidden"}
@@ -108,7 +164,8 @@ const HeaderBar: React.FC<Props> = () => {
 					<br />
 					<br />
 					<span>Personale A.T.A</span>
-				</div><br/>
+				</div>
+				<br />
 
 				<span
 					className="header-spaced"
@@ -120,8 +177,17 @@ const HeaderBar: React.FC<Props> = () => {
 					onClick={() => setActiveMenus([false, !activeMenus[1], false, false])}
 					className={activeMenus[1] ? "header-rotated" : ""}
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
-				</span><br/>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+					</svg>
+				</span>
+				<br />
 				<div
 					id="header-istituto"
 					className={activeMenus[1] ? "header-menu" : "header-hidden"}
@@ -145,9 +211,12 @@ const HeaderBar: React.FC<Props> = () => {
 					<br />
 					<br />
 					<span>Bandi e Gare</span>
-				</div><br/>
+				</div>
+				<br />
 
-				<span className="header-spaced">Reti di ambito</span><br/><br/>
+				<span className="header-spaced">Reti di ambito</span>
+				<br />
+				<br />
 				<span
 					className="header-spaced"
 					onClick={() => setActiveMenus([false, false, !activeMenus[2], false])}
@@ -158,8 +227,17 @@ const HeaderBar: React.FC<Props> = () => {
 					onClick={() => setActiveMenus([false, false, !activeMenus[2], false])}
 					className={activeMenus[2] ? "header-rotated" : ""}
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
-				</span><br/>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+					</svg>
+				</span>
+				<br />
 				<div
 					id="header-anno-scolastico"
 					className={activeMenus[2] ? "header-menu" : "header-hidden"}
@@ -201,7 +279,8 @@ const HeaderBar: React.FC<Props> = () => {
 					<br />
 					<br />
 					<span>Viaggi ed uscite didattiche</span>
-				</div><br/>
+				</div>
+				<br />
 
 				<span
 					className="header-spaced"
@@ -213,8 +292,18 @@ const HeaderBar: React.FC<Props> = () => {
 					onClick={() => setActiveMenus([false, false, false, !activeMenus[3]])}
 					className={activeMenus[3] ? "header-rotated" : ""}
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
-				</span><br/><br/>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 0 24 24"
+						width="24"
+					>
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+					</svg>
+				</span>
+				<br />
+				<br />
 				<div
 					id="header-nostri-siti"
 					className={activeMenus[3] ? "header-menu" : "header-hidden"}

@@ -2,10 +2,16 @@ import React from "react";
 import "./Landing.css";
 import logo from "../assets/logo.png";
 import clickButton from "../assets/clickButton.svg";
+import { RouteComponentProps } from "react-router-dom";
+import { setTimeout } from "timers";
 
-interface Props {}
+interface Props extends RouteComponentProps {}
 
-const LandingPage: React.FC<Props> = () => {
+const LandingPage: React.FC<Props> = ({ history }) => {
+	setTimeout(() => {
+		history.push("/home");
+	}, 2000);
+
 	return (
 		<main className="Landing">
 			<div className="background">

@@ -1,150 +1,162 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 main.Landing {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("./LandingBackground.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: hidden;
-  position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-image: url("../assets/LandingBackground.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	position: relative;
 }
 
 main.Landing * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 main.Landing div.background {
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left top, right top, color-stop(33%, #e6e6e6), color-stop(0%, transparent));
-  background: linear-gradient(90deg, #e6e6e6 33%, transparent 0%);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
+	height: 100%;
+	width: 100%;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(33%, #e6e6e6),
+		color-stop(0%, transparent)
+	);
+	background: linear-gradient(90deg, #e6e6e6 33%, transparent 0%);
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (1fr) [2];
+	grid-template-columns: repeat(2, 1fr);
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	justify-items: center;
 }
 
 main.Landing div.background img.logo {
-  width: 60%;
-  opacity: 0;
-  -webkit-animation: fadeLeft 1s ease-in-out 0s 1 forwards;
-          animation: fadeLeft 1s ease-in-out 0s 1 forwards;
+	width: 60%;
+	opacity: 0;
+	-webkit-animation: fadeLeft 1s ease-in-out 0s 1 forwards;
+	animation: fadeLeft 1s ease-in-out 0s 1 forwards;
 }
 
 main.Landing div.background div.titles {
-  font-family: Montserrat;
-  margin-bottom: 15em;
+	font-family: Montserrat;
+	margin-bottom: 15em;
 }
 
 main.Landing div.background div.titles * {
-  opacity: 0;
+	opacity: 0;
 }
 
 main.Landing div.background div.titles h1 {
-  font-size: 3em;
-  font-weight: 500;
-  -webkit-animation: fadeRight 1s ease-in-out 0s 1 forwards;
-          animation: fadeRight 1s ease-in-out 0s 1 forwards;
+	font-size: 3em;
+	font-weight: 500;
+	-webkit-animation: fadeRight 1s ease-in-out 0s 1 forwards;
+	animation: fadeRight 1s ease-in-out 0s 1 forwards;
 }
 
 main.Landing div.background div.titles h2 {
-  font-size: 1.5em;
-  font-weight: normal;
-  margin-top: 2em;
-  -webkit-animation: fadeRight 1s ease-in-out 100ms 1 forwards;
-          animation: fadeRight 1s ease-in-out 100ms 1 forwards;
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-top: 2em;
+	-webkit-animation: fadeRight 1s ease-in-out 100ms 1 forwards;
+	animation: fadeRight 1s ease-in-out 100ms 1 forwards;
 }
 
 main.Landing .clickButton {
-  position: absolute;
-  bottom: 3em;
-  right: 3em;
-  -webkit-animation: opacity 1s ease-in-out 0s 1 forwards;
-          animation: opacity 1s ease-in-out 0s 1 forwards;
+	position: absolute;
+	bottom: 3em;
+	right: 3em;
+	-webkit-animation: opacity 1s ease-in-out 0s 1 forwards;
+	animation: opacity 1s ease-in-out 0s 1 forwards;
 }
 
 @-webkit-keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @-webkit-keyframes fadeLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fadeLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @-webkit-keyframes fadeRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fadeRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @media (max-width: 800px) {
-  main.Landing {
-    font-size: 14px;
-  }
-  main.Landing div.background {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(33%, #e6e6e6), color-stop(0%, transparent));
-    background: linear-gradient(180deg, #e6e6e6 33%, transparent 0%);
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
-    gap: 3em;
-  }
-  main.Landing div.background div.titles {
-    margin-left: 2em;
-    margin-right: 2em;
-  }
+	main.Landing {
+		font-size: 14px;
+	}
+	main.Landing div.background {
+		background: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			color-stop(33%, #e6e6e6),
+			color-stop(0%, transparent)
+		);
+		background: linear-gradient(180deg, #e6e6e6 33%, transparent 0%);
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+		-ms-grid-rows: (1fr) [2];
+		grid-template-rows: repeat(2, 1fr);
+		gap: 3em;
+	}
+	main.Landing div.background div.titles {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
 }

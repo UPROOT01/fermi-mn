@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import logoOutline from "../assets/logo_outline.svg";
 import logoText from "../assets/logo_text.svg";
 import "./HeaderBar.css";
-import { link } from "fs";
 
 interface Props {}
 
@@ -69,16 +68,21 @@ const HeaderBar: React.FC<Props> = () => {
 				</div>
 				{links.map((link, index) => {
 					if (link.child === undefined) {
-						return <span>{link.title}</span>;
+						return <span key={index + "d"}>{link.title}</span>;
 					} else {
 						return (
-							<>
-								<span className="header-spaced" onClick={() => openMenu(index)}>
+							<React.Fragment key={index + "ddddd"}>
+								<span
+									key={index + "d"}
+									className="header-spaced"
+									onClick={() => openMenu(index)}
+								>
 									{link.title}
 								</span>
 								<span
 									onClick={() => openMenu(index)}
 									className={linksState[index] ? "header-rotated" : ""}
+									key={index + "icon"}
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +94,7 @@ const HeaderBar: React.FC<Props> = () => {
 										<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
 									</svg>
 								</span>
-							</>
+							</React.Fragment>
 						);
 					}
 				})}
@@ -119,22 +123,28 @@ const HeaderBar: React.FC<Props> = () => {
 				{links.map((link, index) => {
 					if (link.child === undefined) {
 						return (
-							<>
-								{" "}
-								<span className="header-spaced">Home</span>
-								<br />
-								<br />
-							</>
+							<React.Fragment key={index + "mobiledddddd"}>
+								<span key={index + "mobile"} className="header-spaced">
+									Home
+								</span>
+								<br key={index + "mobileb1"} />
+								<br key={index + "mobileb2"} />
+							</React.Fragment>
 						);
 					} else {
 						return (
-							<>
-								<span className="header-spaced" onClick={() => openMenu(index)}>
+							<React.Fragment key={index + "mobiledddd"}>
+								<span
+									key={index + "mobile"}
+									className="header-spaced"
+									onClick={() => openMenu(index)}
+								>
 									Area riservata
 								</span>
 								<span
 									onClick={() => openMenu(index)}
 									className={linksState[index] ? "header-rotated" : ""}
+									key={index + "mobile icon"}
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -150,16 +160,17 @@ const HeaderBar: React.FC<Props> = () => {
 									className={
 										linksState[index] ? "header-menu" : "header-hidden"
 									}
+									key={index + "mobileHeaderMenu"}
 								>
-									{link.child.children.map((child) => (
-										<>
-											<p>
+									{link.child.children.map((child, j) => (
+										<React.Fragment key={index + " " + j + "chchdddd"}>
+											<p key={index + " " + j + "chch"}>
 												<span>{child.title}</span>
 											</p>
-										</>
+										</React.Fragment>
 									))}
 								</div>
-							</>
+							</React.Fragment>
 						);
 					}
 				})}

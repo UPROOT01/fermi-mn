@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import logoOutline from "../assets/logo_outline.svg";
 import logoText from "../assets/logo_text.svg";
 import "./HeaderBar.css";
-import { link } from "fs";
 
 interface Props {}
 
@@ -34,8 +33,8 @@ const links: {
 				{ title: "Documenti", link: "" },
 				{ title: "Parlano di noi", link: "" },
 				{ title: "Bandi e Gare", link: "" },
-			]
-		}
+			],
+		},
 	},
 	{ title: "Reti di Ambito" },
 	{
@@ -55,8 +54,8 @@ const links: {
 				{ title: "FabAcademy", link: "" },
 				{ title: "Innovazioni Green", link: "" },
 				{ title: "Viaggi ed uscite didattiche", link: "" },
-			]
-		}
+			],
+		},
 	},
 	{
 		title: "Nostri siti",
@@ -69,10 +68,10 @@ const links: {
 				{ title: "Archivio di Stato", link: "" },
 				{ title: "Scuola21", link: "" },
 				{ title: "Progetto LER", link: "" },
-			]
-		}
+			],
+		},
 	},
-	{ title: "Link utili" }
+	{ title: "Link utili" },
 ];
 
 const isLastOpen = (array: { [index: number]: boolean }) => {

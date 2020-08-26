@@ -47,6 +47,19 @@ const HeaderBar: React.FC<Props> = () => {
 	});
 	const [mobileMenu, setMobileMenu] = useState(false);
 
+	const openMenu = (index: number) => {
+		const changeValue = !linksState[index];
+
+		for (const i in linksState) {
+			linksState[i] = false;
+		}
+
+		setLinksState({
+			...linksState,
+			[index]: changeValue,
+		});
+	};
+
 	return (
 		<div className="header-main">
 			<div className="header-container">
@@ -60,24 +73,11 @@ const HeaderBar: React.FC<Props> = () => {
 					} else {
 						return (
 							<>
-								<span
-									className="header-spaced"
-									onClick={() =>
-										setLinksState({
-											...linksState,
-											[index]: !linksState[index],
-										})
-									}
-								>
+								<span className="header-spaced" onClick={() => openMenu(index)}>
 									{link.title}
 								</span>
 								<span
-									onClick={() =>
-										setLinksState({
-											...linksState,
-											[index]: !linksState[index],
-										})
-									}
+									onClick={() => openMenu(index)}
 									className={linksState[index] ? "header-rotated" : ""}
 								>
 									<svg
@@ -129,24 +129,11 @@ const HeaderBar: React.FC<Props> = () => {
 					} else {
 						return (
 							<>
-								<span
-									className="header-spaced"
-									onClick={() =>
-										setLinksState({
-											...linksState,
-											[index]: !linksState[index],
-										})
-									}
-								>
+								<span className="header-spaced" onClick={() => openMenu(index)}>
 									Area riservata
 								</span>
 								<span
-									onClick={() =>
-										setLinksState({
-											...linksState,
-											[index]: !linksState[index],
-										})
-									}
+									onClick={() => openMenu(index)}
 									className={linksState[index] ? "header-rotated" : ""}
 								>
 									<svg

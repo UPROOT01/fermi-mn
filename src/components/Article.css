@@ -44,7 +44,7 @@ article.Article img {
   z-index: 0;
   -ms-grid-column-align: end;
       justify-self: end;
-  height: 100%;
+  height: 10em;
 }
 
 @media (max-width: 700px) {

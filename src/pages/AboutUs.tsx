@@ -2,13 +2,14 @@ import React from "react";
 import HeaderBar from "../components/HeaderBar";
 import banner from "../assets/banner.jpg";
 import "./AboutUs.css";
+import { RouteComponentProps } from "react-router-dom";
 
-interface Props {}
+interface Props extends RouteComponentProps {}
 
-const AboutUsPage: React.FC<Props> = () => {
+const AboutUsPage: React.FC<Props> = ({ history, location, match }) => {
 	return (
 		<main className="AboutUsPage">
-			<HeaderBar></HeaderBar>
+			<HeaderBar {...{ history, location, match }}></HeaderBar>
 			<div className="pageContainer">
 				<section>
 					<h1>La nostra storia</h1>

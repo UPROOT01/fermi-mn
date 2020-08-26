@@ -11,6 +11,7 @@ import bachecaSindacale from "../assets/useful_links/bachecasindacale.png";
 
 import "./UsefulLinks.css";
 import HeaderBar from "../components/HeaderBar";
+import { RouteComponentProps } from "react-router-dom";
 
 const utilityLinks: { title: string; imageUrl: string }[] = [
 	{ title: "Moodle", imageUrl: moodle },
@@ -25,7 +26,7 @@ const utilityLinks: { title: string; imageUrl: string }[] = [
 	{ title: "Bacheca Sindacale", imageUrl: bachecaSindacale },
 ];
 
-interface UsefulLinksProps {}
+interface UsefulLinksProps extends RouteComponentProps {}
 interface SingleElementProps {
 	title: string;
 	imageUrl: string;
@@ -42,10 +43,14 @@ const SingleElement: React.FC<SingleElementProps> = ({ title, imageUrl }) => {
 	);
 };
 
-const UsefulLinksPage: React.FC<UsefulLinksProps> = () => {
+const UsefulLinksPage: React.FC<UsefulLinksProps> = ({
+	history,
+	location,
+	match,
+}) => {
 	return (
 		<>
-			<HeaderBar></HeaderBar>
+			<HeaderBar {...{ history, location, match }}></HeaderBar>
 			<main className="UsefulLinksPage">
 				<div className="main-container">
 					{utilityLinks.map((link, index) => (

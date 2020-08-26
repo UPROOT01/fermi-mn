@@ -9,7 +9,7 @@ interface Props extends RouteComponentProps {}
 
 const LandingPage: React.FC<Props> = ({ history }) => {
 	setTimeout(() => {
-		history.push("/home");
+		history.replace("/home");
 	}, 2000);
 
 	return (

@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import logoOutline from "../assets/logo_outline.svg";
 import logoText from "../assets/logo_text.svg";
 import "./HeaderBar.css";
+import { RouteComponentProps } from "react-router-dom";
 
-interface Props {}
+interface Props extends RouteComponentProps {}
 
 const links: {
 	title: string;
 	link?: string;
-	child?: { children: { title: string; link: string }[] };
+	route?: string; //prima route poi link
+	child?: { children: { title: string; link?: string; route?: string }[] };
 }[] = [
 	{ title: "Home" },
 	{
@@ -82,7 +84,7 @@ const isLastOpen = (array: { [index: number]: boolean }) => {
 	return array[links.length - 1];
 };
 
-const HeaderBar: React.FC<Props> = () => {
+const HeaderBar: React.FC<Props> = ({ history }) => {
 	const [linksState, setLinksState] = useState(() => {
 		const obj: { [index: number]: boolean } = {};
 

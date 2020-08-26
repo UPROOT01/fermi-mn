@@ -2,6 +2,7 @@
 	padding-top: 100%;
 	width: 100%;
 	position: relative;
+	height: fit-content;
 
 	div.container {
 		position: absolute;
@@ -43,7 +44,7 @@
 main.UsefulLinksPage {
 	background-color: #f0f0f0;
 	background-image: url("../assets/home-backround.svg");
-	min-height: 100vh;
+	height: 100vh;
 	width: 100%;
 
 	background-repeat: no-repeat;
@@ -57,7 +58,7 @@ main.UsefulLinksPage {
 		width: 80%;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
-		grid-auto-rows: 1fr;
+		grid-auto-rows: min-content;
 		gap: 4em;
 		padding: 3em;
 	}

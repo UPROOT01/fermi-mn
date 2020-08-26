@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logoOutline from "../assets/logo_outline.svg";
 import logoText from "../assets/logo_text.svg";
 import "./HeaderBar.css";
+import { link } from "fs";
 
 interface Props {}
 
@@ -12,16 +13,66 @@ const links: {
 }[] = [
 	{ title: "Home" },
 	{
-		title: "Settings",
+		title: "Area riservata",
 		child: {
 			children: [
-				{ title: "heyla", link: "" },
-				{ title: "heyla", link: "" },
-				{ title: "heyla", link: "" },
-				{ title: "heyla", link: "" },
+				{ title: "Studenti", link: "" },
+				{ title: "Genitori", link: "" },
+				{ title: "Docenti", link: "" },
+				{ title: "Personale A.T.A.", link: "" },
 			],
 		},
 	},
+	{
+		title: "Istituto",
+		child: {
+			children: [
+				{ title: "Chi Siamo", link: "" },
+				{ title: "Le Persone", link: "" },
+				{ title: "I nostri corsi", link: "" },
+				{ title: "Strutture e Servizi", link: "" },
+				{ title: "Documenti", link: "" },
+				{ title: "Parlano di noi", link: "" },
+				{ title: "Bandi e Gare", link: "" },
+			]
+		}
+	},
+	{ title: "Reti di Ambito" },
+	{
+		title: "A.S. 2019/2020",
+		child: {
+			children: [
+				{ title: "Privacy GDPR 679/16", link: "" },
+				{ title: "Calendario Orari", link: "" },
+				{ title: "Progetti", link: "" },
+				{ title: "Cittadinanza e Costituzione", link: "" },
+				{ title: "Formazione", link: "" },
+				{ title: "Programmazione Comune", link: "" },
+				{ title: "Alternanza Scuola Lavoro", link: "" },
+				{ title: "Materiali Invalsi", link: "" },
+				{ title: "Info per III medie", link: "" },
+				{ title: "Orientamento in uscita", link: "" },
+				{ title: "FabAcademy", link: "" },
+				{ title: "Innovazioni Green", link: "" },
+				{ title: "Viaggi ed uscite didattiche", link: "" },
+			]
+		}
+	},
+	{
+		title: "Nostri siti",
+		child: {
+			children: [
+				{ title: "Open Source e Freeware", link: "" },
+				{ title: "I siti del Fermi", link: "" },
+				{ title: "Fotovoltaico", link: "" },
+				{ title: "Dati Energetici", link: "" },
+				{ title: "Archivio di Stato", link: "" },
+				{ title: "Scuola21", link: "" },
+				{ title: "Progetto LER", link: "" },
+			]
+		}
+	},
+	{ title: "Link utili" }
 ];
 
 const isLastOpen = (array: { [index: number]: boolean }) => {
@@ -46,19 +97,6 @@ const HeaderBar: React.FC<Props> = () => {
 	});
 	const [mobileMenu, setMobileMenu] = useState(false);
 
-	const openMenu = (index: number) => {
-		const changeValue = !linksState[index];
-
-		for (const i in linksState) {
-			linksState[i] = false;
-		}
-
-		setLinksState({
-			...linksState,
-			[index]: changeValue,
-		});
-	};
-
 	return (
 		<div className="header-main">
 			<div className="header-container">
@@ -68,21 +106,29 @@ const HeaderBar: React.FC<Props> = () => {
 				</div>
 				{links.map((link, index) => {
 					if (link.child === undefined) {
-						return <span key={index + "d"}>{link.title}</span>;
+						return <span className="header-spaced">{link.title}</span>;
 					} else {
 						return (
-							<React.Fragment key={index + "ddddd"}>
+							<>
 								<span
-									key={index + "d"}
 									className="header-spaced"
-									onClick={() => openMenu(index)}
+									onClick={() =>
+										setLinksState({
+											...linksState,
+											[index]: !linksState[index],
+										})
+									}
 								>
 									{link.title}
 								</span>
 								<span
-									onClick={() => openMenu(index)}
+									onClick={() =>
+										setLinksState({
+											...linksState,
+											[index]: !linksState[index],
+										})
+									}
 									className={linksState[index] ? "header-rotated" : ""}
-									key={index + "icon"}
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +140,7 @@ const HeaderBar: React.FC<Props> = () => {
 										<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
 									</svg>
 								</span>
-							</React.Fragment>
+							</>
 						);
 					}
 				})}
@@ -123,28 +169,35 @@ const HeaderBar: React.FC<Props> = () => {
 				{links.map((link, index) => {
 					if (link.child === undefined) {
 						return (
-							<React.Fragment key={index + "mobiledddddd"}>
-								<span key={index + "mobile"} className="header-spaced">
-									Home
-								</span>
-								<br key={index + "mobileb1"} />
-								<br key={index + "mobileb2"} />
-							</React.Fragment>
+							<>
+								{" "}
+								<span className="header-spaced">Home</span>
+								<br />
+								<br />
+							</>
 						);
 					} else {
 						return (
-							<React.Fragment key={index + "mobiledddd"}>
+							<>
 								<span
-									key={index + "mobile"}
 									className="header-spaced"
-									onClick={() => openMenu(index)}
+									onClick={() =>
+										setLinksState({
+											...linksState,
+											[index]: !linksState[index],
+										})
+									}
 								>
 									Area riservata
 								</span>
 								<span
-									onClick={() => openMenu(index)}
+									onClick={() =>
+										setLinksState({
+											...linksState,
+											[index]: !linksState[index],
+										})
+									}
 									className={linksState[index] ? "header-rotated" : ""}
-									key={index + "mobile icon"}
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -160,17 +213,16 @@ const HeaderBar: React.FC<Props> = () => {
 									className={
 										linksState[index] ? "header-menu" : "header-hidden"
 									}
-									key={index + "mobileHeaderMenu"}
 								>
-									{link.child.children.map((child, j) => (
-										<React.Fragment key={index + " " + j + "chchdddd"}>
-											<p key={index + " " + j + "chch"}>
+									{link.child.children.map((child) => (
+										<>
+											<p>
 												<span>{child.title}</span>
 											</p>
-										</React.Fragment>
+										</>
 									))}
 								</div>
-							</React.Fragment>
+							</>
 						);
 					}
 				})}

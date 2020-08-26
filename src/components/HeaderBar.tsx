@@ -118,7 +118,11 @@ const HeaderBar: React.FC<Props> = () => {
 				</div>
 				{links.map((link, index) => {
 					if (link.child === undefined) {
-						return <span key={index + "d"}>{link.title}</span>;
+						return (
+							<span className="header-spaced" key={index + "d"}>
+								{link.title}
+							</span>
+						);
 					} else {
 						return (
 							<React.Fragment key={index + "ddddd"}>
@@ -184,17 +188,16 @@ const HeaderBar: React.FC<Props> = () => {
 					} else {
 						return (
 							<React.Fragment key={index + "mobiledddd"}>
-								<p>
-									<span
-										key={index + "mobile"}
-										className="header-spaced"
-										onClick={() => openMenu(index)}
-									>
+								<p onClick={() => openMenu(index)}>
+									<span key={index + "mobile"} className="header-spaced">
 										{link.title}
 									</span>
+
 									<span
-										onClick={() => openMenu(index)}
-										className={linksState[index] ? "header-rotated" : ""}
+										className={
+											"header-span-special " +
+											(linksState[index] ? "header-rotated" : "")
+										}
 										key={index + "mobile icon"}
 									>
 										<svg

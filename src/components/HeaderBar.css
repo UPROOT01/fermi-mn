@@ -10,6 +10,10 @@
 	z-index: 999;
 }
 
+.header-span-special {
+	height: min-content;
+}
+
 .header-main p:not(:last-child) {
 	margin: 0;
 	margin-bottom: 1em;
@@ -148,7 +152,8 @@
 	}
 
 	.header-mobile-menu > p {
-		display: block;
+		display: flex;
+		align-items: center;
 	}
 
 	span.header-rotated {

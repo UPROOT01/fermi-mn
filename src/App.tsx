@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 import LandingPage from "./pages/Landing";
-import UsefulLinksPage from "./pages/UsefulLinks";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import AboutUsPage from "./pages/AboutUs";
 import LoadingPage from "./pages/Loading";
 
 const HomePage = React.lazy(() => import("./pages/Home"));
+const AboutUsPage = React.lazy(() => import("./pages/AboutUs"));
+const UsefulLinksPage = React.lazy(() => import("./pages/UsefulLinks"));
 
 function App() {
 	return (

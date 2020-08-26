@@ -96,6 +96,19 @@ const HeaderBar: React.FC<Props> = () => {
 	});
 	const [mobileMenu, setMobileMenu] = useState(false);
 
+	const openMenu = (index: number) => {
+		const changeValue = !linksState[index];
+
+		for (const i in linksState) {
+			linksState[i] = false;
+		}
+
+		setLinksState({
+			...linksState,
+			[index]: changeValue,
+		});
+	};
+
 	return (
 		<div className="header-main">
 			<div className="header-container">
@@ -105,29 +118,21 @@ const HeaderBar: React.FC<Props> = () => {
 				</div>
 				{links.map((link, index) => {
 					if (link.child === undefined) {
-						return <span className="header-spaced">{link.title}</span>;
+						return <span key={index + "d"}>{link.title}</span>;
 					} else {
 						return (
-							<>
+							<React.Fragment key={index + "ddddd"}>
 								<span
+									key={index + "d"}
 									className="header-spaced"
-									onClick={() =>
-										setLinksState({
-											...linksState,
-											[index]: !linksState[index],
-										})
-									}
+									onClick={() => openMenu(index)}
 								>
 									{link.title}
 								</span>
 								<span
-									onClick={() =>
-										setLinksState({
-											...linksState,
-											[index]: !linksState[index],
-										})
-									}
+									onClick={() => openMenu(index)}
 									className={linksState[index] ? "header-rotated" : ""}
+									key={index + "icon"}
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +144,7 @@ const HeaderBar: React.FC<Props> = () => {
 										<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
 									</svg>
 								</span>
-							</>
+							</React.Fragment>
 						);
 					}
 				})}
@@ -207,16 +212,17 @@ const HeaderBar: React.FC<Props> = () => {
 									className={
 										linksState[index] ? "header-menu" : "header-hidden"
 									}
+									key={index + "mobileHeaderMenu"}
 								>
-									{link.child.children.map((child) => (
-										<>
-											<p>
+									{link.child.children.map((child, j) => (
+										<React.Fragment key={index + " " + j + "chchdddd"}>
+											<p key={index + " " + j + "chch"}>
 												<span>{child.title}</span>
 											</p>
-										</>
+										</React.Fragment>
 									))}
 								</div>
-							</>
+							</React.Fragment>
 						);
 					}
 				})}

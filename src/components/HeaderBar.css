@@ -10,6 +10,17 @@
 	z-index: 999;
 }
 
+.header-main p:not(:last-child) {
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+.header-main p:hover {
+	user-select: none;
+	cursor: pointer;
+	font-weight: 700;
+}
+
 .header-mobile-menu span svg {
 	height: 1em;
 }
@@ -81,6 +92,10 @@
 	#header-nostri-siti {
 		padding-top: 0;
 	}
+
+	.header-mobile-lastopen {
+		padding-bottom: 25px;
+	}
 }
 
 .header-container {
@@ -98,7 +113,6 @@
 	user-select: none;
 	cursor: pointer;
 	font-family: "Montserrat", sans-serif;
-	font-weight: 500;
 	transition: font-weight;
 	transition: transform 300ms ease-in-out;
 }
@@ -117,6 +131,8 @@
 	margin-top: 4px;
 	box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);
 	padding: 25px;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	animation-name: header-menu-spawn;
 	animation-duration: 300ms;
 	transform-origin: top;

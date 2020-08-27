@@ -36,7 +36,8 @@ const Article: React.FC<Props> = ({ title, description, imageUrl, date }) => {
 	useEffect(() => {
 		// fatelo con angular questo, voglio vedere :)
 		if (!showAll) {
-			h2.current!.style.height = windowWidth > 700 ? "calc(2 * 1.5em)" : "0";
+			h2.current!.style.height =
+				windowWidth > 700 ? "calc(2 * 1.5em - 1px)" : "0";
 		} else {
 			h2.current!.style.height = measureDiv.current!.clientHeight + "px";
 		}

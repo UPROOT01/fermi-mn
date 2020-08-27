@@ -58,6 +58,7 @@ article.Article div.text h2 div.text {
   padding: 0;
   margin: 0;
   padding-right: 1em;
+  font-size: 1.1em;
 }
 
 article.Article img {
@@ -92,6 +93,7 @@ article.Article img {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    font-size: 1.35em;
   }
   article.Article div.text h2 {
     height: 0;
@@ -100,6 +102,9 @@ article.Article img {
   }
   article.Article div.text h2.expanded {
     margin-top: 1em;
+  }
+  article.Article div.text h2 div.text {
+    font-size: 1.2em;
   }
   article.Article span.dots {
     display: none;

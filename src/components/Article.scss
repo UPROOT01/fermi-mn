@@ -47,6 +47,7 @@ article.Article {
 				padding: 0;
 				margin: 0;
 				padding-right: 1em;
+				font-size: 1.1em;
 			}
 		}
 	}
@@ -72,6 +73,7 @@ article.Article {
 
 			h1 {
 				align-items: flex-end;
+				font-size: 1.35em;
 			}
 
 			h2 {
@@ -81,6 +83,10 @@ article.Article {
 
 				&.expanded {
 					margin-top: 1em;
+				}
+
+				div.text {
+					font-size: 1.2em;
 				}
 			}
 		}

@@ -172,4 +172,8 @@ main.Landing .clickButton {
     margin-left: 2em;
     margin-right: 2em;
   }
+  main.Landing .clickButton {
+    bottom: 6em;
+    right: 3em;
+  }
 }

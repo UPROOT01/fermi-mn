@@ -82,6 +82,8 @@ article.Article img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
   }
   article.Article div.text {
     margin: 0;

@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
-import LandingPage from "./pages/Landing";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import LoadingPage from "./pages/Loading";
 
 const HomePage = React.lazy(() => import("./pages/Home"));
@@ -12,7 +11,9 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route path="/" exact component={LandingPage}></Route>
+				<Route path="/" exact>
+					<Redirect to="/home" />
+				</Route>
 				<React.Suspense fallback={<LoadingPage></LoadingPage>}>
 					<Route path="/home" exact component={HomePage}></Route>
 					<Route path="/aboutUs" exact component={AboutUsPage}></Route>

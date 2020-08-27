@@ -4,7 +4,7 @@ import logoText from "../assets/logo_text.svg";
 import "./HeaderBar.css";
 import { RouteComponentProps } from "react-router-dom";
 
-interface Props extends RouteComponentProps { }
+interface Props extends RouteComponentProps {}
 
 const links: {
 	title: string;
@@ -12,69 +12,139 @@ const links: {
 	route?: string; //prima route poi link
 	child?: { children: { title: string; link?: string; route?: string }[] };
 }[] = [
-		{ title: "Home", route: "/home" },
-		{
-			title: "Area riservata",
-			child: {
-				children: [
-					{ title: "Studenti", link: "http://fermimn.edu.it/studenti/index.php" },
-					{ title: "Genitori", link: "http://fermimn.edu.it/genitori/index.php" },
-					{ title: "Docenti", link: "http://fermimn.edu.it/docenti/index.php" },
-					{ title: "Personale A.T.A.", link: "http://fermimn.edu.it/ATA/index.php" },
-				],
-			},
+	{ title: "Home", route: "/home" },
+	{
+		title: "Area riservata",
+		child: {
+			children: [
+				{ title: "Studenti", link: "http://fermimn.edu.it/studenti/index.php" },
+				{ title: "Genitori", link: "http://fermimn.edu.it/genitori/index.php" },
+				{ title: "Docenti", link: "http://fermimn.edu.it/docenti/index.php" },
+				{
+					title: "Personale A.T.A.",
+					link: "http://fermimn.edu.it/ATA/index.php",
+				},
+			],
 		},
-		{
-			title: "Istituto",
-			child: {
-				children: [
-					{ title: "Chi Siamo", route: "/aboutUs" },
-					{ title: "Le Persone", link: "http://fermimn.edu.it/persone/index.php" },
-					{ title: "I nostri corsi", link: "http://fermimn.edu.it/struttura/index.php" },
-					{ title: "Strutture e Servizi", link: "http://fermimn.edu.it/servizi/index.php" },
-					{ title: "Documenti", link: "http://fermimn.edu.it/documenti/index.php" },
-					{ title: "Parlano di noi", link: "http://fermimn.edu.it/parlanodinoi/index.php" },
-					{ title: "Bandi e Gare", link: "http://fermimn.edu.it/bandi/" },
-				],
-			},
+	},
+	{
+		title: "Istituto",
+		child: {
+			children: [
+				{ title: "Chi Siamo", route: "/aboutUs" },
+				{
+					title: "Le Persone",
+					link: "http://fermimn.edu.it/persone/index.php",
+				},
+				{
+					title: "I nostri corsi",
+					link: "http://fermimn.edu.it/struttura/index.php",
+				},
+				{
+					title: "Strutture e Servizi",
+					link: "http://fermimn.edu.it/servizi/index.php",
+				},
+				{
+					title: "Documenti",
+					link: "http://fermimn.edu.it/documenti/index.php",
+				},
+				{
+					title: "Parlano di noi",
+					link: "http://fermimn.edu.it/parlanodinoi/index.php",
+				},
+				{ title: "Bandi e Gare", link: "http://fermimn.edu.it/bandi/" },
+			],
 		},
-		{ title: "Reti di Ambito", link: "http://www.istitutocomprensivoasola.gov.it/rete-di-ambito-19-mantova" },
-		{
-			title: "A.S. 2019/2020",
-			child: {
-				children: [
-					{ title: "Privacy GDPR 679/16", link: "http://fermimn.edu.it/privacy/index.php" },
-					{ title: "Calendario Orari", link: "http://fermimn.edu.it/orari/index.php" },
-					{ title: "Progetti", link: "http://fermimn.edu.it/progetti/index.php" },
-					{ title: "Cittadinanza e Costituzione", link: "http://fermimn.edu.it/cittadinanza/index.php" },
-					{ title: "Formazione", link: "http://fermimn.edu.it/formazione/index.php" },
-					{ title: "Programmazione Comune", link: "https://www.fermi.mn.it/programmazione-comune/" },
-					{ title: "Alternanza Scuola Lavoro", link: "http://fermimn.edu.it/alternanza/" },
-					{ title: "Materiali Invalsi", link: "http://fermimn.edu.it/invalsi/index.php" },
-					{ title: "Info per III medie", link: "http://fermimn.edu.it/informazioni/index.php" },
-					{ title: "Orientamento in uscita", link: "http://fermimn.edu.it/orientamento_uni/index.php" },
-					{ title: "FabAcademy", link: "http://fermimn.edu.it/fabacademy/index.php" },
-					{ title: "Innovazioni Green", link: "http://fermimn.edu.it/green/" },
-					{ title: "Viaggi ed uscite didattiche", link: "http://fermimn.edu.it/studenti/viaggi.php" },
-				],
-			},
+	},
+	{
+		title: "Reti di Ambito",
+		link:
+			"http://www.istitutocomprensivoasola.gov.it/rete-di-ambito-19-mantova",
+	},
+	{
+		title: "A.S. 2019/2020",
+		child: {
+			children: [
+				{
+					title: "Privacy GDPR 679/16",
+					link: "http://fermimn.edu.it/privacy/index.php",
+				},
+				{
+					title: "Calendario Orari",
+					link: "http://fermimn.edu.it/orari/index.php",
+				},
+				{ title: "Progetti", link: "http://fermimn.edu.it/progetti/index.php" },
+				{
+					title: "Cittadinanza e Costituzione",
+					link: "http://fermimn.edu.it/cittadinanza/index.php",
+				},
+				{
+					title: "Formazione",
+					link: "http://fermimn.edu.it/formazione/index.php",
+				},
+				{
+					title: "Programmazione Comune",
+					link: "https://www.fermi.mn.it/programmazione-comune/",
+				},
+				{
+					title: "Alternanza Scuola Lavoro",
+					link: "http://fermimn.edu.it/alternanza/",
+				},
+				{
+					title: "Materiali Invalsi",
+					link: "http://fermimn.edu.it/invalsi/index.php",
+				},
+				{
+					title: "Info per III medie",
+					link: "http://fermimn.edu.it/informazioni/index.php",
+				},
+				{
+					title: "Orientamento in uscita",
+					link: "http://fermimn.edu.it/orientamento_uni/index.php",
+				},
+				{
+					title: "FabAcademy",
+					link: "http://fermimn.edu.it/fabacademy/index.php",
+				},
+				{ title: "Innovazioni Green", link: "http://fermimn.edu.it/green/" },
+				{
+					title: "Viaggi ed uscite didattiche",
+					link: "http://fermimn.edu.it/studenti/viaggi.php",
+				},
+			],
 		},
-		{
-			title: "Nostri siti",
-			child: {
-				children: [
-					{ title: "Open Source e Freeware", link: "http://fermimn.edu.it/opensource/index.php" },
-					{ title: "I siti del Fermi", link: "http://fermimn.edu.it/storia/index.php" },
-					{ title: "Fotovoltaico", link: "http://servizi.fermi.mn.it/fotovoltaico/" },
-					{ title: "Dati Energetici", link: "http://servizi.fermi.mn.it/fotovoltaico/provincia.php" },
-					{ title: "Archivio di Stato", link: "http://fermimn.edu.it/archiviodistato/index.php" },
-					{ title: "Scuola21", link: "http://scuola21.fermi.mn.it/" },
-					{ title: "Progetto LER", link: "http://ler.fermimn.edu.it/index.php" },
-				],
-			},
+	},
+	{
+		title: "Nostri siti",
+		child: {
+			children: [
+				{
+					title: "Open Source e Freeware",
+					link: "http://fermimn.edu.it/opensource/index.php",
+				},
+				{
+					title: "I siti del Fermi",
+					link: "http://fermimn.edu.it/storia/index.php",
+				},
+				{
+					title: "Fotovoltaico",
+					link: "http://servizi.fermi.mn.it/fotovoltaico/",
+				},
+				{
+					title: "Dati Energetici",
+					link: "http://servizi.fermi.mn.it/fotovoltaico/provincia.php",
+				},
+				{
+					title: "Archivio di Stato",
+					link: "http://fermimn.edu.it/archiviodistato/index.php",
+				},
+				{ title: "Scuola21", link: "http://scuola21.fermi.mn.it/" },
+				{ title: "Progetto LER", link: "http://ler.fermimn.edu.it/index.php" },
+			],
 		},
-		{ title: "Link utili", route: "/utility" },
-	];
+	},
+	{ title: "Link utili", route: "/utility" },
+];
 
 const isLastOpen = (array: { [index: number]: boolean }) => {
 	if (array[links.length - 1] === undefined) {
@@ -114,21 +184,32 @@ const HeaderBar: React.FC<Props> = ({ history }) => {
 	return (
 		<div className="header-main">
 			<div className="header-container">
-				<div className="header-logo-container">
+				<div
+					className="header-logo-container"
+					onClick={() => history.push("/home")}
+				>
 					<img className="header-logo-img" src={logoOutline} alt="error" />
 					<img className="header-logo-text" src={logoText} alt="error" />
 				</div>
 				{links.map((link, index) => {
 					if (link.route !== undefined) {
 						return (
-							<span className="header-spaced" key={index + "d"} onClick={() => { history.push(link.route as string) }}>
+							<span
+								className="header-spaced"
+								key={index + "d"}
+								onClick={() => {
+									history.push(link.route!.toString());
+								}}
+							>
 								{link.title}
 							</span>
 						);
 					} else if (link.link !== undefined) {
 						return (
 							<span className="header-spaced" key={index + "d"}>
-								<a className="header-ext-link" href={link.link}>{link.title}</a>
+								<a className="header-ext-link" href={link.link}>
+									{link.title}
+								</a>
 							</span>
 						);
 					} else if (link.child === undefined) {
@@ -193,7 +274,11 @@ const HeaderBar: React.FC<Props> = ({ history }) => {
 						return (
 							<React.Fragment key={index + "mobiledddddd"}>
 								<p>
-									<span key={index + "mobile"} className="header-spaced" onClick={() => history.push(link.route as string)}>
+									<span
+										key={index + "mobile"}
+										className="header-spaced"
+										onClick={() => history.push(link.route!.toString())}
+									>
 										{link.title}
 									</span>
 								</p>
@@ -204,7 +289,9 @@ const HeaderBar: React.FC<Props> = ({ history }) => {
 							<React.Fragment key={index + "mobiledddddd"}>
 								<p>
 									<span key={index + "mobile"} className="header-spaced">
-										<a className="header-ext-link" href={link.link}>{link.title}</a>
+										<a className="header-ext-link" href={link.link}>
+											{link.title}
+										</a>
 									</span>
 								</p>
 							</React.Fragment>
@@ -257,7 +344,10 @@ const HeaderBar: React.FC<Props> = ({ history }) => {
 										if (child.route !== undefined) {
 											return (
 												<React.Fragment key={index + " " + j + "chchdddd"}>
-													<p key={index + " " + j + "chch"} onClick={() => history.push(child.route as string)}>
+													<p
+														key={index + " " + j + "chch"}
+														onClick={() => history.push(child.route as string)}
+													>
 														<span>{child.title}</span>
 													</p>
 												</React.Fragment>
@@ -266,7 +356,11 @@ const HeaderBar: React.FC<Props> = ({ history }) => {
 											return (
 												<React.Fragment key={index + " " + j + "chchdddd"}>
 													<p key={index + " " + j + "chch"}>
-														<span><a className="header-ext-link" href={child.link}>{child.title}</a></span>
+														<span>
+															<a className="header-ext-link" href={child.link}>
+																{child.title}
+															</a>
+														</span>
 													</p>
 												</React.Fragment>
 											);

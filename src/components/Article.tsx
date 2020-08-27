@@ -6,9 +6,10 @@ interface Props {
 	title: string;
 	description: string;
 	imageUrl: string;
+	date: Date;
 }
 
-const Article: React.FC<Props> = ({ title, description, imageUrl }) => {
+const Article: React.FC<Props> = ({ title, description, imageUrl, date }) => {
 	const h2 = useRef<HTMLHeadingElement>(null);
 	const measureDiv = useRef<HTMLDivElement>(null);
 	const [showDots, setShowDots] = useState(false);
@@ -51,7 +52,12 @@ const Article: React.FC<Props> = ({ title, description, imageUrl }) => {
 		>
 			<img src={imageUrl} alt="error" />
 			<div className="text">
-				<h1>{title}</h1>
+				<h1>
+					<div className="title">{title}</div>
+					<div className="date">
+						{date.getDate()}/{date.getMonth()}/{date.getFullYear()}
+					</div>
+				</h1>
 				<h2 ref={h2} className={showAll ? "expanded" : ""}>
 					<div ref={measureDiv} className="text">
 						{description}

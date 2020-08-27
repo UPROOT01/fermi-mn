@@ -27,6 +27,21 @@ article.Article div.text h1 {
   font-weight: bold;
   font-size: 1.3em;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article.Article div.text h1 .date {
+  font-size: 0.65em;
+  color: #888888;
+  font-weight: normal;
 }
 
 article.Article div.text h2 {
@@ -35,8 +50,8 @@ article.Article div.text h2 {
   overflow: hidden;
   position: relative;
   height: 3em;
-  -webkit-transition: height 350ms ease-in-out;
-  transition: height 350ms ease-in-out;
+  -webkit-transition: height 350ms ease-in-out, margin 350ms ease-in-out;
+  transition: height 350ms ease-in-out, margin 350ms ease-in-out;
 }
 
 article.Article div.text h2 div.text {
@@ -71,9 +86,18 @@ article.Article img {
   article.Article div.text {
     margin: 0;
   }
+  article.Article div.text h1 {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
   article.Article div.text h2 {
     height: 0;
     width: 100%;
+    margin: 0;
+  }
+  article.Article div.text h2.expanded {
+    margin-top: 1em;
   }
   article.Article span.dots {
     display: none;

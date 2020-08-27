@@ -29,6 +29,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							IS E.Fermi -Mantova
 							(notizia del 8-6-2020)"
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -36,6 +37,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -43,6 +45,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -50,6 +53,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -57,6 +61,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -64,6 +69,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -71,6 +77,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -78,6 +85,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -85,6 +93,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -92,6 +101,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -99,6 +109,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -106,6 +117,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -113,6 +125,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -120,6 +133,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -127,6 +141,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 					<div className="wrapper">
@@ -134,6 +149,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 							title="ULTIMO GIORNO DI SCUOLA"
 							description="In questo strano ultimo giorno di scuola ci tenevo a salutare tutte le ragazze e i ragazzi, sono orgogliosa di voi perchè quasi tutti avete affrontato questo lungo periodo con grande serietà..."
 							imageUrl="https://www.fermimn.edu.it/?clean=true&action=icon&newsid=752"
+							date={new Date(Date.now())}
 						></Article>
 					</div>
 				</div>

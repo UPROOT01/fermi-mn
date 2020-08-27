@@ -1,5 +1,11 @@
 main.AboutUsPage {
 	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+	background-color: #f0f0f0;
+	background-image: url("../assets/home-backround.svg");
+
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-attachment: fixed;
 
 	img.banner {
 		width: 70%;
@@ -9,8 +15,10 @@ main.AboutUsPage {
 
 	.pageContainer {
 		font-family: "Poppins", sans-serif;
+		background-color: white;
+		padding: 2em;
 
-		width: 80%;
+		width: 70%;
 		margin: auto;
 
 		display: flex;

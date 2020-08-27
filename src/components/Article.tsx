@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import { title } from "process";
 import "./Article.css";
 
 interface Props {

@@ -3,6 +3,7 @@ import "./Home.css";
 import Article from "../components/Article";
 import HeaderBar from "../components/HeaderBar";
 import { RouteComponentProps } from "react-router-dom";
+import Slider from "../components/Slider";
 
 interface Props extends RouteComponentProps {}
 
@@ -11,6 +12,7 @@ const HomePage: React.FC<Props> = ({ history, location, match }) => {
 		<>
 			<HeaderBar {...{ history, location, match }}></HeaderBar>
 			<main className="HomePage">
+				<Slider></Slider>
 				<div className="mainList">
 					<div className="wrapper">
 						<Article

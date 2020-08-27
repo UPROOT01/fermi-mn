@@ -10,7 +10,7 @@ interface Props extends RouteComponentProps {}
 const LandingPage: React.FC<Props> = ({ history }) => {
 	const [scrollY, setScrollY] = useState(0);
 	const main = useRef<HTMLElement>(null);
-	const [mainHeight, setMainHeight] = useState(0);
+	// const [mainHeight, setMainHeight] = useState(0);
 
 	useEffect(() => {
 		const scrollAnimation = () => {
@@ -20,7 +20,7 @@ const LandingPage: React.FC<Props> = ({ history }) => {
 		};
 		window.addEventListener("scroll", scrollAnimation);
 
-		setMainHeight(main.current!.clientHeight);
+		// setMainHeight(main.current!.clientHeight);
 
 		return () => {
 			window.removeEventListener("scroll", scrollAnimation);
@@ -31,7 +31,10 @@ const LandingPage: React.FC<Props> = ({ history }) => {
 		<main
 			className="Landing"
 			onClick={() => {
-				window.scrollTo({ top: mainHeight, behavior: "smooth" });
+				window.scrollTo({
+					top: main.current!.clientHeight,
+					behavior: "smooth",
+				});
 			}}
 			ref={main}
 		>

@@ -32,7 +32,24 @@
           align-items: center;
 }
 
-.SingleElement div.container img {
+.SingleElement div.container a.ext-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+}
+
+.SingleElement div.container a.ext-link img {
   height: calc(100% - 4em);
   max-width: calc(100% - 2em);
   -o-object-fit: scale-down;
@@ -42,11 +59,18 @@
   margin-right: 1em;
 }
 
-.SingleElement div.container div.title {
+.SingleElement div.container a.ext-link div.title {
+  color: black;
+  text-decoration: none;
   text-align: center;
   margin: auto;
   margin-top: 0.3em;
   margin-bottom: 0.3em;
+  font-weight: 500;
+}
+
+.SingleElement div.container a.ext-link div.title:hover {
+  font-weight: bold;
 }
 
 main.UsefulLinksPage {

@@ -13,31 +13,34 @@ import "./UsefulLinks.css";
 import HeaderBar from "../components/HeaderBar";
 import { RouteComponentProps } from "react-router-dom";
 
-const utilityLinks: { title: string; imageUrl: string }[] = [
-	{ title: "Moodle", imageUrl: moodle },
-	{ title: "Zimbra Mail", imageUrl: mail },
-	{ title: "Orario", imageUrl: analogClock },
-	{ title: "Calendario Giornaliero", imageUrl: calendar },
-	{ title: "Registro Elettronico", imageUrl: mastercom },
-	{ title: "Pon", imageUrl: pon },
-	{ title: "Amministrazione Trasparente", imageUrl: repubblica },
-	{ title: "Albo Pretorio", imageUrl: repubblica },
-	{ title: "PagoInRete", imageUrl: pagoInRete },
-	{ title: "Bacheca Sindacale", imageUrl: bachecaSindacale },
+const utilityLinks: { title: string, imageUrl: string, link: string }[] = [
+	{ title: "Moodle", imageUrl: moodle, link: "https://moodle.fermi.mn.it/" },
+	{ title: "Zimbra Mail", imageUrl: mail, link: "https://mail.fermi.mn.it/" },
+	{ title: "Orario", imageUrl: analogClock, link: "https://www.fermimn.edu.it/orari/riservata/orario_in_corso/" },
+	{ title: "Calendario Giornaliero", imageUrl: calendar, link: "https://www.fermimn.edu.it/orari/calendar.php" },
+	{ title: "Registro Elettronico", imageUrl: mastercom, link: "http://fermi-mn-sito.registroelettronico.com/" },
+	{ title: "Pon", imageUrl: pon, link: "https://www.fermimn.edu.it/PON/" },
+	{ title: "Amministrazione Trasparente", imageUrl: repubblica, link: "https://www.fermimn.edu.it/spaggiari/trasparenza.php" },
+	{ title: "Albo Pretorio", imageUrl: repubblica, link: "https://www.fermimn.edu.it/spaggiari/albo.php" },
+	{ title: "PagoInRete", imageUrl: pagoInRete, link: "https://www.fermimn.edu.it/pagoinrete/" },
+	{ title: "Bacheca Sindacale", imageUrl: bachecaSindacale, link: "http://albo.fermimn.edu.it/albi/bacheca-sindacale" },
 ];
 
 interface UsefulLinksProps extends RouteComponentProps {}
 interface SingleElementProps {
 	title: string;
 	imageUrl: string;
+	link: string;
 }
 
-const SingleElement: React.FC<SingleElementProps> = ({ title, imageUrl }) => {
+const SingleElement: React.FC<SingleElementProps> = ({ title, imageUrl, link }) => {
 	return (
 		<div className="SingleElement">
 			<div className="container">
-				<img src={imageUrl} alt="error" />
-				<div className="title">{title}</div>
+				<a className="ext-link" href={link}>
+					<img src={imageUrl} alt="error" />
+					<div className="title">{title}</div>
+				</a>
 			</div>
 		</div>
 	);

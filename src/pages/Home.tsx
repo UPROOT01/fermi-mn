@@ -4,14 +4,15 @@ import Article from "../components/Article";
 import HeaderBar from "../components/HeaderBar";
 import { RouteComponentProps } from "react-router-dom";
 import Slider from "../components/Slider";
+import LandingPage from "./Landing";
 
 interface Props extends RouteComponentProps {}
 
 const articles: {
-	title: string,
-	description: string,
-	imageUrl: string,
-	date: Date,
+	title: string;
+	description: string;
+	imageUrl: string;
+	date: Date;
 }[] = [
 	{
 		title: "ULTIMO GIORNO DI SCUOLA",
@@ -29,7 +30,8 @@ const articles: {
 		date: new Date(Date.now()),
 	},
 	{
-		title: "GRADUATORIE PROVINCIALI E D'ISTITUTO: DOMANDE DAL 22 LUGLIO AL 6 AGOSTO",
+		title:
+			"GRADUATORIE PROVINCIALI E D'ISTITUTO: DOMANDE DAL 22 LUGLIO AL 6 AGOSTO",
 		description: `Il Ministero dell’Istruzione con il decreto dipartimentale 858/20 ha dato il via alla procedura per l’inserimento nelle Graduatorie Provinciali e di Istituto per le Supplenze. Gli aspiranti potranno presentare domanda a partire dalle ore 15.00 di mercoledì 22 luglio 2020, fino alle ore 23.59 del 6 agosto.
 
 		Le istanze potranno essere presentate attraverso l’applicazione “Istanze online (POLIS)”. Sarà necessario possedere le credenziali SPID, o in alternativa, un’utenza valida per l’accesso ai servizi presenti nell’area riservata del Ministero con l’abilitazione specifica al servizio “Istanze online (POLIS)”.
@@ -67,7 +69,8 @@ const articles: {
 		date: new Date(2020, 6, 8),
 	},
 	{
-		title: "INIZIATIVA DEI GENITORI DEL FERMI A SUPPORTO DELLA DIDATTICA A DISTANZA",
+		title:
+			"INIZIATIVA DEI GENITORI DEL FERMI A SUPPORTO DELLA DIDATTICA A DISTANZA",
 		description: `Gent.me Famiglie, il Consiglio di Istituto, nella seduta del 13 maggio, ha approvato all’unanimità l’iniziativa promossa dai genitori eletti nel C.d.I. e destinata a sovvenzionare la dotazione di strumentazione tecnica per la didattica a distanza: più precisamente l’acquisto di ausili tecnici per le aule e di PC portatili, videocamere, cuffie, etc., .da cedere in uso agli studenti del “FERMI” che si trovassero nella impossibilità di disporre del minimo necessario per seguire interattivamente la didattica a distanza.
 
 		Tale opportunità verrebbe resa attraverso lo strumento della donazione su base volontaria, a mezzo bonifico a favore del “FERMI” ai numeri IBAN di c.c. bancario/postale indicati sul sito ufficiale della ns. scuola nell’intestazione. La causale da indicare nel bonifico sarà la seguente: “Supporto Emergenza COVID 19 - Dotazione strumentazione tecnica per la Didattica a distanza”.
@@ -81,11 +84,12 @@ const articles: {
 		imageUrl: "https://www.fermimn.edu.it/?clean=true&action=icon&newsid=749",
 		date: new Date(2020, 5, 23),
 	},
-]
+];
 
 const HomePage: React.FC<Props> = ({ history, location, match }) => {
 	return (
 		<>
+			<LandingPage {...{ history, location, match }}></LandingPage>
 			<HeaderBar {...{ history, location, match }}></HeaderBar>
 			<main className="HomePage">
 				<Slider></Slider>

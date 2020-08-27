@@ -35,7 +35,6 @@
 }
 
 .header-logo-container {
-	margin-right: auto;
 	display: flex;
 	justify-content: center;
 	cursor: pointer;
@@ -66,7 +65,7 @@
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
 	padding-right: 25px;
 }
 
@@ -121,6 +120,13 @@
 
 .header-spaced {
 	margin-left: 25px;
+}
+
+.header-link-container {
+	margin-left: auto;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 @media (max-width: 1050px) {
@@ -184,5 +190,9 @@
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
 		margin-bottom: 1em;
+	}
+
+	.header-link-container {
+		display: none;
 	}
 }

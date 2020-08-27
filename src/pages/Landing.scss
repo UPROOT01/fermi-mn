@@ -7,13 +7,15 @@ main.Landing {
 	}
 
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	background-image: url("../assets/LandingBackground.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 	overflow: hidden;
 	position: relative;
-	animation: disappear 1s ease-in-out 1s 1 forwards;
+	cursor: pointer;
+	// animation: disappear 1s ease-in-out 1s 1 forwards;
+	// z-index: 1000;
 
 	div.background {
 		height: 100%;
@@ -31,6 +33,7 @@ main.Landing {
 			width: 60%;
 			opacity: 0;
 			animation: fadeLeft 1s ease-in-out 0s 1 forwards;
+			transition: transform 300ms ease-in-out;
 		}
 
 		div.titles {
@@ -45,6 +48,7 @@ main.Landing {
 				font-size: 3em;
 				font-weight: 500;
 				animation: fadeRight 1s ease-in-out 0s 1 forwards;
+				transition: transform 300ms ease-in-out;
 			}
 
 			h2 {
@@ -52,6 +56,7 @@ main.Landing {
 				font-weight: normal;
 				margin-top: 2em;
 				animation: fadeRight 1s ease-in-out 100ms 1 forwards;
+				transition: transform 300ms ease-in-out;
 			}
 		}
 	}

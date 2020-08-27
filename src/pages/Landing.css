@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 main.Landing {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-image: url("../assets/LandingBackground.svg");
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
   position: relative;
-  -webkit-animation: disappear 1s ease-in-out 1s 1 forwards;
-          animation: disappear 1s ease-in-out 1s 1 forwards;
+  cursor: pointer;
 }
 
 main.Landing * {
@@ -36,6 +35,10 @@ main.Landing div.background img.logo {
   opacity: 0;
   -webkit-animation: fadeLeft 1s ease-in-out 0s 1 forwards;
           animation: fadeLeft 1s ease-in-out 0s 1 forwards;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 main.Landing div.background div.titles {
@@ -52,6 +55,10 @@ main.Landing div.background div.titles h1 {
   font-weight: 500;
   -webkit-animation: fadeRight 1s ease-in-out 0s 1 forwards;
           animation: fadeRight 1s ease-in-out 0s 1 forwards;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 main.Landing div.background div.titles h2 {
@@ -60,6 +67,10 @@ main.Landing div.background div.titles h2 {
   margin-top: 2em;
   -webkit-animation: fadeRight 1s ease-in-out 100ms 1 forwards;
           animation: fadeRight 1s ease-in-out 100ms 1 forwards;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 main.Landing .clickButton {

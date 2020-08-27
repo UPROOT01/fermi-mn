@@ -189,64 +189,71 @@ const HeaderBar: React.FC<Props> = ({ history }) => {
 					onClick={() => history.push("/home")}
 				>
 					<img className="header-logo-img" src={logoOutline} alt="error" />
-					<img className="header-logo-text" src={logoText} alt="error" />
 				</div>
-				{links.map((link, index) => {
-					if (link.route !== undefined) {
-						return (
-							<span
-								className="header-spaced"
-								key={index + "d"}
-								onClick={() => {
-									history.push(link.route!.toString());
-								}}
-							>
-								{link.title}
-							</span>
-						);
-					} else if (link.link !== undefined) {
-						return (
-							<span className="header-spaced" key={index + "d"}>
-								<a className="header-ext-link" href={link.link}>
-									{link.title}
-								</a>
-							</span>
-						);
-					} else if (link.child === undefined) {
-						return (
-							<span className="header-spaced" key={index + "d"}>
-								{link.title}
-							</span>
-						);
-					} else {
-						return (
-							<React.Fragment key={index + "ddddd"}>
+				<img
+					onClick={() => history.push("/home")}
+					className="header-logo-text"
+					src={logoText}
+					alt="error"
+				/>
+				<div className="header-link-container">
+					{links.map((link, index) => {
+						if (link.route !== undefined) {
+							return (
 								<span
-									key={index + "d"}
 									className="header-spaced"
-									onClick={() => openMenu(index)}
+									key={index + "d"}
+									onClick={() => {
+										history.push(link.route!.toString());
+									}}
 								>
 									{link.title}
 								</span>
-								<span
-									onClick={() => openMenu(index)}
-									className={linksState[index] ? "header-rotated" : ""}
-									key={index + "icon"}
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										height="24"
-										viewBox="0 0 24 24"
-										width="24"
-									>
-										<path d="M0 0h24v24H0z" fill="none" />
-										<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-									</svg>
+							);
+						} else if (link.link !== undefined) {
+							return (
+								<span className="header-spaced" key={index + "d"}>
+									<a className="header-ext-link" href={link.link}>
+										{link.title}
+									</a>
 								</span>
-							</React.Fragment>
-						);
-					}
-				})}
+							);
+						} else if (link.child === undefined) {
+							return (
+								<span className="header-spaced" key={index + "d"}>
+									{link.title}
+								</span>
+							);
+						} else {
+							return (
+								<React.Fragment key={index + "ddddd"}>
+									<span
+										key={index + "d"}
+										className="header-spaced"
+										onClick={() => openMenu(index)}
+									>
+										{link.title}
+									</span>
+									<span
+										onClick={() => openMenu(index)}
+										className={linksState[index] ? "header-rotated" : ""}
+										key={index + "icon"}
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											height="24"
+											viewBox="0 0 24 24"
+											width="24"
+										>
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+										</svg>
+									</span>
+								</React.Fragment>
+							);
+						}
+					})}
+				</div>
 				<span
 					className="header-hamburger"
 					onClick={() => setMobileMenu(!mobileMenu)}

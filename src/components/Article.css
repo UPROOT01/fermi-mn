@@ -32,6 +32,17 @@ article.Article div.text h1 {
 article.Article div.text h2 {
   font-weight: normal;
   font-size: 0.8em;
+  overflow: hidden;
+  position: relative;
+  height: 3em;
+  -webkit-transition: height 350ms ease-in-out;
+  transition: height 350ms ease-in-out;
+}
+
+article.Article div.text h2 div.text {
+  padding: 0;
+  margin: 0;
+  padding-right: 1em;
 }
 
 article.Article img {
@@ -61,8 +72,11 @@ article.Article img {
     margin: 0;
   }
   article.Article div.text h2 {
-    display: none;
+    height: 0;
     width: 100%;
+  }
+  article.Article span.dots {
+    display: none;
   }
   article.Article img {
     -o-object-fit: cover;

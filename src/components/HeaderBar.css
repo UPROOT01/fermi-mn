@@ -133,6 +133,10 @@
 		display: inline;
 	}
 
+	.header-logo-text {
+		max-width: fit-content;
+	}
+
 	.header-container span:not(.header-hamburger) {
 		display: none;
 	}

@@ -43,6 +43,10 @@
 	height: 1em;
 }
 
+.header-mobile-menu img {
+	display: none;
+}
+
 .header-logo-container {
 	display: flex;
 	justify-content: center;
@@ -146,6 +150,15 @@
 }
 
 @media screen and (max-width: 1080px) {
+	.header-mobile-menu img {
+		display: initial;
+	}
+
+	.header-social-container {
+		text-align: right;
+		margin-right: 25px;
+	}
+
 	.header-hamburger {
 		display: inline;
 	}

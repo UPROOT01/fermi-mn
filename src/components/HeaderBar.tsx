@@ -386,6 +386,11 @@ const HeaderBar: React.FC<Props> = ({ history }) => {
 						);
 					}
 				})}
+				<div className="header-social-container">
+					<img className="header-social-icon" src={facebook} alt="error" />
+					<img className="header-social-icon" src={instagram} alt="error" />
+					<img className="header-social-icon" src={twitter} alt="error" />
+				</div>
 			</div>
 		</div>
 	);

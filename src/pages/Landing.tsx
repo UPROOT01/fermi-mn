@@ -31,7 +31,7 @@ const LandingPage: React.FC<Props> = ({ history }) => {
 		<main
 			className="Landing"
 			onClick={() => {
-				window.scrollBy({ top: mainHeight, behavior: "smooth" });
+				window.scrollTo({ top: mainHeight, behavior: "smooth" });
 			}}
 			ref={main}
 		>
@@ -47,8 +47,12 @@ const LandingPage: React.FC<Props> = ({ history }) => {
 						Benvenuti al Fermi!
 					</h1>
 					<h2 style={{ transform: "translateX(" + scrollY * 0.9 + "px)" }}>
-						Istituto superiore “E. Fermi”
+						Istituto superiore “Enrico Fermi”
 					</h2>
+					{/* <h3 style={{ transform: "translateX(" + scrollY * 0.8 + "px)" }}>
+						Liceo scientifico delle scienze applicate
+						<br /> Istituto tecnico Settore tecnologico
+					</h3> */}
 				</div>
 			</div>
 

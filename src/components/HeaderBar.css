@@ -10,6 +10,15 @@
 	z-index: 999;
 }
 
+.header-social-container {
+	margin-left: 1em;
+}
+
+.header-social-icon {
+	height: 1.2em;
+	margin-left: 0.5em;
+}
+
 .header-ext-link {
 	text-decoration: none;
 	color: inherit;
@@ -97,6 +106,7 @@
 	animation-name: header-menu-spawn;
 	animation-duration: 300ms;
 	transform-origin: top;
+	padding-left: 2.5em;
 }
 
 .test {
@@ -129,13 +139,13 @@
 	align-items: center;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1250px) {
 	.header-logo-text {
 		max-width: 0;
 	}
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1080px) {
 	.header-hamburger {
 		display: inline;
 	}

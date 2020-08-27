@@ -73,6 +73,20 @@ main.Landing div.background div.titles h2 {
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
+main.Landing div.background div.titles h3 {
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: 0.8em;
+  -webkit-animation: fadeRight 1s ease-in-out 100ms 1 forwards;
+          animation: fadeRight 1s ease-in-out 100ms 1 forwards;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  color: gray;
+  text-align: right;
+}
+
 main.Landing .clickButton {
   position: absolute;
   bottom: 3em;

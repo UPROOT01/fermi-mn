@@ -3,6 +3,9 @@ import logoOutline from "../assets/logo_outline.svg";
 import logoText from "../assets/logo_text.svg";
 import "./HeaderBar.css";
 import { RouteComponentProps } from "react-router-dom";
+import facebook from "../assets/facebook.svg";
+import instagram from "../assets/instagram.svg";
+import twitter from "../assets/twitter.svg";
 
 interface Props extends RouteComponentProps {}
 
@@ -253,6 +256,11 @@ const HeaderBar: React.FC<Props> = ({ history }) => {
 							);
 						}
 					})}
+					<div className="header-social-container">
+						<img className="header-social-icon" src={facebook} alt="error" />
+						<img className="header-social-icon" src={instagram} alt="error" />
+						<img className="header-social-icon" src={twitter} alt="error" />
+					</div>
 				</div>
 				<span
 					className="header-hamburger"

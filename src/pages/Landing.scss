@@ -58,6 +58,16 @@ main.Landing {
 				animation: fadeRight 1s ease-in-out 100ms 1 forwards;
 				transition: transform 300ms ease-in-out;
 			}
+
+			h3 {
+				font-size: 1em;
+				font-weight: normal;
+				margin-top: 0.8em;
+				animation: fadeRight 1s ease-in-out 100ms 1 forwards;
+				transition: transform 300ms ease-in-out;
+				color: gray;
+				text-align: right;
+			}
 		}
 	}
 

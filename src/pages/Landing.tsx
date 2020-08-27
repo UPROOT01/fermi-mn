@@ -13,7 +13,12 @@ const LandingPage: React.FC<Props> = ({ history }) => {
 	}, 2000);
 
 	return (
-		<main className="Landing">
+		<main
+			className="Landing"
+			onClick={() => {
+				history.replace("/home");
+			}}
+		>
 			<div className="background">
 				<img src={logo} alt="error" className="logo" />
 				<div className="titles">

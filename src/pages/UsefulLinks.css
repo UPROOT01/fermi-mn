@@ -76,7 +76,7 @@
 main.UsefulLinksPage {
   background-color: #f0f0f0;
   background-image: url("../assets/home-backround.svg");
-  height: 100vh;
+  min-height: calc(100vh - 4em);
   width: 100%;
   background-repeat: no-repeat;
   background-size: 60%;
@@ -93,10 +93,26 @@ main.UsefulLinksPage div.main-container {
   width: 80%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(10em, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+  -ms-grid-columns: (minmax(8em, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
   grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
   gap: 4em;
   padding: 3em;
+}
+
+@media screen and (max-width: 400px) {
+  main.UsefulLinksPage div.main-container {
+    -ms-grid-columns: (minmax(6em, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
+    gap: 2em;
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main.UsefulLinksPage div.main-container {
+    gap: 2em;
+    padding: 1.5em;
+  }
 }

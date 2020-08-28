@@ -8,6 +8,7 @@ main.Landing {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  background-attachment: fixed;
 }
 
 main.Landing * {

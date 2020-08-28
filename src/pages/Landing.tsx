@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, UIEvent } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Landing.css";
 import logo from "../assets/logo.png";
 import clickButton from "../assets/clickButton.svg";
@@ -29,7 +29,7 @@ const LandingPage: React.FC<Props> = ({ history }) => {
 		window.addEventListener("scroll", scrollAnimation);
 
 		setTimeout(() => {
-			setTitleIndex((titleIndex + 1) % multiLanguageTitle.length);
+			setTitleIndex(1);
 		}, 1500);
 
 		// setMainHeight(main.current!.clientHeight);
@@ -85,7 +85,7 @@ const LandingPage: React.FC<Props> = ({ history }) => {
 						))}
 					</h1>
 					<h2 style={{ transform: "translateX(" + scrollY * 0.9 + "px)" }}>
-						Istituto superiore “Enrico Fermi”
+						Istituto Superiore E. FERMI - Mantova
 					</h2>
 					{/* <h3 style={{ transform: "translateX(" + scrollY * 0.8 + "px)" }}>
 						Liceo scientifico delle scienze applicate

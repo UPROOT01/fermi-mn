@@ -379,6 +379,8 @@ const HeaderBar: React.FC<Props> = ({ history }) => {
 													</p>
 												</React.Fragment>
 											);
+										} else {
+											return null;
 										}
 									})}
 								</div>

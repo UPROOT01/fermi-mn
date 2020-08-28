@@ -45,6 +45,7 @@ main.Landing div.background img.logo {
 main.Landing div.background div.titles {
   font-family: Montserrat;
   margin-bottom: 15em;
+  margin-right: 15em;
 }
 
 main.Landing div.background div.titles * {
@@ -60,6 +61,54 @@ main.Landing div.background div.titles h1 {
   transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  position: relative;
+  height: 1.5em;
+}
+
+@media screen and (max-width: 800px) {
+  main.Landing div.background div.titles h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  main.Landing div.background div.titles h1 {
+    height: 2em;
+  }
+}
+
+main.Landing div.background div.titles h1 span {
+  -webkit-transition: opacity 1.5s ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: opacity 1.5s ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 1.5s ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 1.5s ease-in-out, -webkit-transform 300ms ease-in-out;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media screen and (max-width: 1200px) {
+  main.Landing div.background div.titles h1 span {
+    width: auto;
+  }
+}
+
+main.Landing div.background div.titles h1 span.hidden {
+  position: absolute;
+}
+
+main.Landing div.background div.titles h1 span.old {
+  opacity: 1;
+  position: absolute;
+}
+
+main.Landing div.background div.titles h1 span.new {
+  -webkit-animation: fadeRight 1s ease-in-out 0s 1 forwards;
+          animation: fadeRight 1s ease-in-out 0s 1 forwards;
+}
+
+main.Landing div.background div.titles h1 span:hover {
+  opacity: 0;
 }
 
 main.Landing div.background div.titles h2 {

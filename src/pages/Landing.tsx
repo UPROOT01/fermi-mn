@@ -1,15 +1,23 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, UIEvent } from "react";
 import "./Landing.css";
 import logo from "../assets/logo.png";
 import clickButton from "../assets/clickButton.svg";
 import { RouteComponentProps } from "react-router-dom";
-import { setTimeout } from "timers";
 
 interface Props extends RouteComponentProps {}
+
+const multiLanguageTitle = [
+	"Benvenuti al Fermi!",
+	"Welcome to Fermi!",
+	"Willkommen bei Fermi!",
+	"Bienvenido a Fermi",
+	"Bienvenue à Fermi",
+];
 
 const LandingPage: React.FC<Props> = ({ history }) => {
 	const [scrollY, setScrollY] = useState(0);
 	const main = useRef<HTMLElement>(null);
+	const [titleIndex, setTitleIndex] = useState(0);
 	// const [mainHeight, setMainHeight] = useState(0);
 
 	useEffect(() => {
@@ -20,12 +28,25 @@ const LandingPage: React.FC<Props> = ({ history }) => {
 		};
 		window.addEventListener("scroll", scrollAnimation);
 
+		setTimeout(() => {
+			setTitleIndex((titleIndex + 1) % multiLanguageTitle.length);
+		}, 1500);
+
 		// setMainHeight(main.current!.clientHeight);
 
 		return () => {
 			window.removeEventListener("scroll", scrollAnimation);
 		};
 	}, []);
+
+	useEffect(() => {
+		const handler = setInterval(() => {
+			setTitleIndex((titleIndex + 1) % multiLanguageTitle.length);
+		}, 3000);
+		return () => {
+			clearInterval(handler);
+		};
+	}, [titleIndex]);
 
 	return (
 		<main
@@ -47,7 +68,21 @@ const LandingPage: React.FC<Props> = ({ history }) => {
 				/>
 				<div className="titles">
 					<h1 style={{ transform: "translateX(" + scrollY * 1 + "px)" }}>
-						Benvenuti al Fermi!
+						{multiLanguageTitle.map((language, index) => (
+							<span
+								key={index}
+								style={{
+									opacity: index === titleIndex ? "1" : "0",
+									...{
+										position: "absolute",
+										left: "0",
+										top: "0",
+									},
+								}}
+							>
+								{language}
+							</span>
+						))}
 					</h1>
 					<h2 style={{ transform: "translateX(" + scrollY * 0.9 + "px)" }}>
 						Istituto superiore “Enrico Fermi”

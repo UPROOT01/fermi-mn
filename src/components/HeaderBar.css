@@ -56,6 +56,7 @@
 .header-logo-text {
 	margin-left: 0.5em;
 	transition: max-width 300ms ease-in-out;
+	cursor: pointer;
 }
 
 .header-logo-img {

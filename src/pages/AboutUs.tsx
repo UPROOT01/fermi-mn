@@ -66,8 +66,15 @@ const AboutUsPage: React.FC<Props> = ({ history, location, match }) => {
 						, Strada Spolverina 5, 46100 MANTOVA
 					</p>
 					<p>
-						<b>Telefono:</b> (39) 0376-262675 <br /> <b>Indirizzi email:</b>
-						mnis01100e@istruzione.it - mnis01100e@pec.istruzione.it
+						<b>Telefono:</b> <a href="tel:(39) 0376-262675">(39) 0376-262675</a>{" "}
+						<br /> <b>Indirizzi email: </b>
+						<a href="mailto:mnis01100e@istruzione.it">
+							mnis01100e@istruzione.it
+						</a>{" "}
+						-{" "}
+						<a href="mailto:mnis01100e@pec.istruzione.it">
+							mnis01100e@pec.istruzione.it
+						</a>
 					</p>
 				</section>
 				<section>
